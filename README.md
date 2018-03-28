@@ -16,6 +16,7 @@
 8. Created basic MasterViewModel class.
 9. Defined project-specific colors via category.
 10. Created custom NSError subclass.
+11. Show string status of validation.
 
 © 2018 Nikita Titov
 
