@@ -28,9 +28,20 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testKnownEmails {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCTAssertTrue([self.validator evaluate:@"nmtitov@yandex.ru"]);
+    XCTAssertTrue([self.validator evaluate:@"nmtitov@yandex.kz"]);
+    XCTAssertTrue([self.validator evaluate:@"nmtitov@yandex.by"]);
+    XCTAssertTrue([self.validator evaluate:@"nmtitov@yandex.com"]);
+    XCTAssertTrue([self.validator evaluate:@"nmtitov@ya.ru"]);
+    XCTAssertTrue([self.validator evaluate:@"mail@gmail.com"]);
+    XCTAssertTrue([self.validator evaluate:@"mail+alias@gmail.com"]);
+    XCTAssertTrue([self.validator evaluate:@"first_name.last_name@gmail.com"]);
+    XCTAssertTrue([self.validator evaluate:@"mail2018@gmail.com"]);
+    XCTAssertTrue([self.validator evaluate:@"mail@yahoo.com"]);
+    XCTAssertTrue([self.validator evaluate:@"mail@bing.com"]);
 }
 
 @end
