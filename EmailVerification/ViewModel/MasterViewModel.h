@@ -12,6 +12,6 @@
 @interface MasterViewModel : NSObject
 
 @property (copy, nonatomic) NSString *input;
-@property (readonly, nonatomic) RACSignal *errors;
+@property (readonly, nonatomic) RACSignal *valid;
 
 @end

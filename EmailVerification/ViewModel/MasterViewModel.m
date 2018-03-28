@@ -15,11 +15,11 @@
     if (!self) {
         return nil;
     }
-    _errors = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+    _valid = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
         if (!value) {
             return false;
         }
-        return false;
+        return @(value.length >= 5);
     }];
     return self;
 }

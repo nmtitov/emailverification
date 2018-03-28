@@ -8,6 +8,7 @@
 
 #import "MasterController.h"
 #import "Ensurable.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface MasterController ()
 
@@ -33,6 +34,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self ensure];
+    [self bind];
+    [self subscribe];
+}
+
+- (void)bind {
+    RAC(self, viewModel.input) = self.inputTextField.rac_textSignal;
+}
+
+- (void)subscribe {
+    RAC(self, errorLabel.textColor) = [self.viewModel.valid map:^id _Nullable(NSNumber *value) {
+        return value.boolValue ? UIColor.greenColor : UIColor.redColor;
+    }];
 }
 
 @end
