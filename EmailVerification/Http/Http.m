@@ -20,6 +20,11 @@
     if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
         @throw [Error projectConfigurationError];
     }
+    NSError *error;
+    NSString *kickboxApiKey = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+    if (!kickboxApiKey) {
+        @throw [Error projectConfigurationError];
+    }
     return self;
 }
 
