@@ -13,6 +13,7 @@
 		6F098829206C000900E6146C /* EmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098828206C000900E6146C /* EmailValidatorTests.m */; };
 		6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */; };
 		6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098832206C085100E6146C /* UIColor+EmailVerification.m */; };
+		6F098839206C0E0700E6146C /* kickbox in Resources */ = {isa = PBXBuildFile; fileRef = 6F098838206C0E0700E6146C /* kickbox */; };
 		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
 		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
 		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		6F09882D206C066E00E6146C /* NTStringIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTStringIdentifier.h; sourceTree = "<group>"; };
 		6F098831206C085100E6146C /* UIColor+EmailVerification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EmailVerification.h"; sourceTree = "<group>"; };
 		6F098832206C085100E6146C /* UIColor+EmailVerification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EmailVerification.m"; sourceTree = "<group>"; };
+		6F098838206C0E0700E6146C /* kickbox */ = {isa = PBXFileReference; lastKnownFileType = text; path = kickbox; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		6F098835206C0C5E00E6146C /* ApiKeys */ = {
 			isa = PBXGroup;
 			children = (
+				6F098838206C0E0700E6146C /* kickbox */,
 			);
 			name = ApiKeys;
 			path = EmailVerification/ApiKeys;
@@ -400,6 +403,7 @@
 			files = (
 				6FB4DE86206BCE2300D62416 /* LaunchScreen.storyboard in Resources */,
 				6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */,
+				6F098839206C0E0700E6146C /* kickbox in Resources */,
 				6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
