@@ -11,7 +11,10 @@
 3. Initialized a Cocoapods workspace.
 4. Set explicit 11.2 requirement. No backward compatibility for the sake of brevity.
 5. Created a basic UI layout. MasterController was wrapped in UINavigationController. Navigation bar got Cancel and Done buttons. UITableViewController was embedded in a container view added to MasterController. Default UITableView separators were disabled.
-6. Create Ensurable protocol, make MasterController "ensurable".
+6. Created Ensurable protocol, make MasterController "ensurable".
+7. Created EmailValidator class with tests for both valid and invalid cases.
+8. Created basic MasterViewModel class.
+9. Define project-specific colors via category.
 
 © 2018 Nikita Titov
 
