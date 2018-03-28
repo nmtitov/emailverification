@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MasterController.m
 //  EmailVerification
 //
 //  Created by Nikita Titov on 28/03/2018.
 //  Copyright © 2018 N. M. Titov. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MasterController.h"
 
-@interface ViewController ()
+@interface MasterController ()
 
 @end
 
-@implementation ViewController
+@implementation MasterController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

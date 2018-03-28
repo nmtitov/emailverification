@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MasterController.h
 //  EmailVerification
 //
 //  Created by Nikita Titov on 28/03/2018.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MasterController : UIViewController
 
 @end

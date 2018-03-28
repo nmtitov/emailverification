@@ -15,7 +15,7 @@
 		6FB4DE89206BCE2300D62416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE88206BCE2300D62416 /* main.m */; };
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
-		6FB4DEB4206BD17A00D62416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* ViewController.m */; };
+		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
 		88118B31B065F5A539714D9A /* libPods-EmailVerificationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */; };
 		BC4907A89F2123AAFB630BE4 /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */; };
 /* End PBXBuildFile section */
@@ -57,8 +57,8 @@
 		6FB4DE99206BCE2300D62416 /* EmailVerificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailVerificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailVerificationUITests.m; sourceTree = "<group>"; };
 		6FB4DE9F206BCE2300D62416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB4DEB2206BD17A00D62416 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6FB4DEB3206BD17A00D62416 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6FB4DEB2206BD17A00D62416 /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
+		6FB4DEB3206BD17A00D62416 /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
 		72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.release.xcconfig"; sourceTree = "<group>"; };
 		D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,8 +180,8 @@
 		6FB4DEAB206BD03900D62416 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6FB4DEB3206BD17A00D62416 /* ViewController.h */,
-				6FB4DEB2206BD17A00D62416 /* ViewController.m */,
+				6FB4DEB3206BD17A00D62416 /* MasterController.h */,
+				6FB4DEB2206BD17A00D62416 /* MasterController.m */,
 			);
 			name = Controller;
 			path = EmailVerification/Controller;
@@ -404,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB4DEB4206BD17A00D62416 /* ViewController.m in Sources */,
+				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 			);
