@@ -16,7 +16,6 @@
 		6F098839206C0E0700E6146C /* kickbox.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F098838206C0E0700E6146C /* kickbox.txt */; };
 		6F09883D206C142A00E6146C /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09883C206C142A00E6146C /* Http.m */; };
 		6F098840206C151B00E6146C /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09883F206C151B00E6146C /* Error.m */; };
-		6F09884C206C175E00E6146C /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098843206C175E00E6146C /* NSString+Email.m */; };
 		6F09884D206C175E00E6146C /* NSString+hasContent__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098845206C175E00E6146C /* NSString+hasContent__NT.m */; };
 		6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098847206C175E00E6146C /* NSString+isEmpty__NT.m */; };
 		6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098849206C175E00E6146C /* NSString+isMatching__NT.m */; };
@@ -72,8 +71,6 @@
 		6F09883C206C142A00E6146C /* Http.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
 		6F09883E206C151B00E6146C /* Error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
 		6F09883F206C151B00E6146C /* Error.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
-		6F098842206C175E00E6146C /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
-		6F098843206C175E00E6146C /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
 		6F098844206C175E00E6146C /* NSString+hasContent__NT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+hasContent__NT.h"; sourceTree = "<group>"; };
 		6F098845206C175E00E6146C /* NSString+hasContent__NT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+hasContent__NT.m"; sourceTree = "<group>"; };
 		6F098846206C175E00E6146C /* NSString+isEmpty__NT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+isEmpty__NT.h"; sourceTree = "<group>"; };
@@ -228,8 +225,6 @@
 		6F098841206C175E00E6146C /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				6F098842206C175E00E6146C /* NSString+Email.h */,
-				6F098843206C175E00E6146C /* NSString+Email.m */,
 				6F098844206C175E00E6146C /* NSString+hasContent__NT.h */,
 				6F098845206C175E00E6146C /* NSString+hasContent__NT.m */,
 				6F098846206C175E00E6146C /* NSString+isEmpty__NT.h */,
@@ -548,7 +543,6 @@
 				6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 				6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */,
-				6F09884C206C175E00E6146C /* NSString+Email.m in Sources */,
 				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
 				6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */,
 				6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */,
