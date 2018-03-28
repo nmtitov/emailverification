@@ -7,6 +7,14 @@
 //
 
 #import "MasterViewModel.h"
+#import "EmailValidator.h"
+#import <ReactiveObjC/RACEXTScope.h>
+
+@interface MasterViewModel ()
+
+@property (readonly, nonatomic) EmailValidator *validator;
+
+@end
 
 @implementation MasterViewModel
 
@@ -15,11 +23,16 @@
     if (!self) {
         return nil;
     }
+    _validator = [[EmailValidator alloc] init];
+    
+    @weakify(self);
     _valid = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+        @strongify(self);
         if (!value) {
             return false;
         }
-        return @(value.length >= 5);
+        BOOL result = [self.validator evaluate:value];
+        return @(result);
     }];
     return self;
 }
