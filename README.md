@@ -1,4 +1,4 @@
-# Email Verification Project
+# Email Verification — iOS Coding Challenge
 
 ## Task
 
