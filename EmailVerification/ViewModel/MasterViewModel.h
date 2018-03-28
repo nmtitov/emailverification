@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface MasterViewModel : NSObject
+
+@property (copy, nonatomic) NSString *input;
+@property (readonly, nonatomic) RACSignal *errors;
 
 @end

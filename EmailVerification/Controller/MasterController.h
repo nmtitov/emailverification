@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Ensurable.h"
+#import "MasterViewModel.h"
 
 @interface MasterController : UIViewController <Ensurable>
+
+@property (readonly, nonatomic) MasterViewModel *viewModel;
+
+// Dependencies
+- (void)setViewModel:(MasterViewModel *)viewModel;
 
 @end

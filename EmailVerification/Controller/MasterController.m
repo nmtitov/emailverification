@@ -19,8 +19,15 @@
 @implementation MasterController
 
 - (void)ensure {
+    // IB
     NSParameterAssert(self.inputTextField);
     NSParameterAssert(self.errorLabel);
+    // Dependencies
+    NSParameterAssert(self.viewModel);
+}
+
+- (void)setViewModel:(MasterViewModel *)viewModel {
+    _viewModel = viewModel;
 }
 
 - (void)viewDidLoad {

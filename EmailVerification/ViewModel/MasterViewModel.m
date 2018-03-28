@@ -10,4 +10,18 @@
 
 @implementation MasterViewModel
 
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _errors = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+        if (!value) {
+            return false;
+        }
+        return false;
+    }];
+    return self;
+}
+
 @end
