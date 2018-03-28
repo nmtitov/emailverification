@@ -2,5 +2,5 @@
 
 © 2018 Nikita Titov
 
-[http://titov.link]
+http://titov.link
 
