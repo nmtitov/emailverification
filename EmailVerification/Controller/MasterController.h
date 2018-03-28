@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Ensurable.h"
+#import "MasterViewModel.h"
+#import "NSObject+NTStringIdentifier.h"
 
-@interface MasterController : UIViewController <Ensurable>
+@interface MasterController : UIViewController <Ensurable, NTStringIdentifier>
+
+@property (readonly, nonatomic) MasterViewModel *viewModel;
+
+// Dependencies
+- (void)setViewModel:(MasterViewModel *)viewModel;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MasterViewModel.h"
+#import "MasterController.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +17,19 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self configureRoot];
     return YES;
+}
+
+- (void)configureRoot {
+    UINavigationController *navigation = (UINavigationController *)self.window.rootViewController;
+    NSParameterAssert(navigation);
+
+    MasterController *controller = (MasterController *)navigation.topViewController;    
+    NSParameterAssert(controller);
+    
+    MasterViewModel *viewModel = [[MasterViewModel alloc] init];
+    [controller setViewModel:viewModel];
 }
 
 @end

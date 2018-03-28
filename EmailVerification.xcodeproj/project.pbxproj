@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5085790A0A94877901E65A80 /* libPods-EmailVerificationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1660A7F3837F388427433317 /* libPods-EmailVerificationTests.a */; };
+		6F098823206BF75700E6146C /* MasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098822206BF75700E6146C /* MasterViewModel.m */; };
+		6F098827206BFCD000E6146C /* EmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098826206BFCD000E6146C /* EmailValidator.m */; };
+		6F098829206C000900E6146C /* EmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098828206C000900E6146C /* EmailValidatorTests.m */; };
+		6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */; };
+		6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098832206C085100E6146C /* UIColor+EmailVerification.m */; };
 		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
 		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
 		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
@@ -44,6 +49,16 @@
 		498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.debug.xcconfig"; sourceTree = "<group>"; };
 		6F098820206BF57300E6146C /* Ensurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ensurable.h; sourceTree = "<group>"; };
+		6F098821206BF75700E6146C /* MasterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewModel.h; sourceTree = "<group>"; };
+		6F098822206BF75700E6146C /* MasterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewModel.m; sourceTree = "<group>"; };
+		6F098825206BFCD000E6146C /* EmailValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailValidator.h; sourceTree = "<group>"; };
+		6F098826206BFCD000E6146C /* EmailValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailValidator.m; sourceTree = "<group>"; };
+		6F098828206C000900E6146C /* EmailValidatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EmailValidatorTests.m; path = EmailVerificationTests/EmailValidatorTests.m; sourceTree = SOURCE_ROOT; };
+		6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NTStringIdentifier.m"; sourceTree = "<group>"; };
+		6F09882B206C061C00E6146C /* NSObject+NTStringIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NTStringIdentifier.h"; sourceTree = "<group>"; };
+		6F09882D206C066E00E6146C /* NTStringIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTStringIdentifier.h; sourceTree = "<group>"; };
+		6F098831206C085100E6146C /* UIColor+EmailVerification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EmailVerification.h"; sourceTree = "<group>"; };
+		6F098832206C085100E6146C /* UIColor+EmailVerification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EmailVerification.m"; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +135,8 @@
 		6F09881E206BF52900E6146C /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				6F098824206BFCAC00E6146C /* Common */,
+				6F098830206C071400E6146C /* ProjectSpecific */,
 				6F09881F206BF54500E6146C /* Protocol */,
 			);
 			name = Misc;
@@ -130,8 +147,29 @@
 			isa = PBXGroup;
 			children = (
 				6F098820206BF57300E6146C /* Ensurable.h */,
+				6F09882D206C066E00E6146C /* NTStringIdentifier.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6F098824206BFCAC00E6146C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6F098825206BFCD000E6146C /* EmailValidator.h */,
+				6F098826206BFCD000E6146C /* EmailValidator.m */,
+				6F09882B206C061C00E6146C /* NSObject+NTStringIdentifier.h */,
+				6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6F098830206C071400E6146C /* ProjectSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				6F098831206C085100E6146C /* UIColor+EmailVerification.h */,
+				6F098832206C085100E6146C /* UIColor+EmailVerification.m */,
+			);
+			path = ProjectSpecific;
 			sourceTree = "<group>";
 		};
 		6FB4DE6D206BCE2200D62416 = {
@@ -180,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */,
+				6F098828206C000900E6146C /* EmailValidatorTests.m */,
 				6FB4DE94206BCE2300D62416 /* Info.plist */,
 			);
 			name = EmailVerificationTests;
@@ -209,6 +248,8 @@
 		6FB4DEAC206BD03900D62416 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6F098821206BF75700E6146C /* MasterViewModel.h */,
+				6F098822206BF75700E6146C /* MasterViewModel.m */,
 			);
 			name = ViewModel;
 			path = EmailVerification/ViewModel;
@@ -423,9 +464,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F098823206BF75700E6146C /* MasterViewModel.m in Sources */,
+				6F098827206BFCD000E6146C /* EmailValidator.m in Sources */,
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
+				6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
+				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */,
+				6F098829206C000900E6146C /* EmailValidatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
