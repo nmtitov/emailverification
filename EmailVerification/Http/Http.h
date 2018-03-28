@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "Ensurable.h"
 #import "ValidateResponse.h"
 
