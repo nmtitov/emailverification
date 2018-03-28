@@ -116,6 +116,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F09881E206BF52900E6146C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Misc;
+			path = EmailVerification/Misc;
+			sourceTree = SOURCE_ROOT;
+		};
 		6FB4DE6D206BCE2200D62416 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +155,7 @@
 				6FB4DEAC206BD03900D62416 /* ViewModel */,
 				6FB4DEAB206BD03900D62416 /* Controller */,
 				6FB4DEAE206BD03900D62416 /* View */,
+				6F09881E206BF52900E6146C /* Misc */,
 				6FB4DE7F206BCE2300D62416 /* Main.storyboard */,
 				6FB4DE82206BCE2300D62416 /* Assets.xcassets */,
 				6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */,
