@@ -38,12 +38,12 @@
     }
     _validator = [[EmailValidator alloc] init];
     
-    _isEmpty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+    _isEmpty = [RACObserve(self, input) map:^id (NSString *value) {
         return @(value.isEmpty__NT);
     }];
 
     @weakify(self);
-    _isValidFormat = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+    _isValidFormat = [RACObserve(self, input) map:^id (NSString *value) {
         @strongify(self);
         return @([self.validator evaluate:value]);
     }];
