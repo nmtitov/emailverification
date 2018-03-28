@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+#import "Ensurable.h"
 
-@interface Http : NSObject
+@interface Http : NSObject <Ensurable>
+
+@property (readonly, strong, nonatomic) AFHTTPSessionManager *manager;
 
 @end

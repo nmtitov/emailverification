@@ -11,11 +11,17 @@
 
 @implementation Http
 
+- (void)ensure {
+    NSParameterAssert(self.manager);
+}
+
 - (instancetype)init {
     self = [super init];
     if (!self) {
         return nil;
     }
+    
+    // Get API key
     NSURL *url = [NSBundle.mainBundle URLForResource:@"kickbox" withExtension:@"txt"];
     if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
         @throw [Error projectConfigurationError];
@@ -25,6 +31,14 @@
     if (!kickboxApiKey) {
         @throw [Error projectConfigurationError];
     }
+    
+    // Configure manager
+    NSURL *base = [NSURL URLWithString:@"https://api.kickbox.com/v2/"];
+    NSParameterAssert(base);
+    
+    _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:base];
+    
+    [self ensure];
     return self;
 }
 
