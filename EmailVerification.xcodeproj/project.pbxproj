@@ -43,6 +43,7 @@
 		45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.debug.xcconfig"; sourceTree = "<group>"; };
+		6F098820206BF57300E6146C /* Ensurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ensurable.h; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		6F09881F206BF54500E6146C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				6F098820206BF57300E6146C /* Ensurable.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
