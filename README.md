@@ -14,7 +14,8 @@
 6. Created Ensurable protocol, make MasterController "ensurable".
 7. Created EmailValidator class with tests for both valid and invalid cases.
 8. Created basic MasterViewModel class.
-9. Define project-specific colors via category.
+9. Defined project-specific colors via category.
+10. Created custom NSError subclass.
 
 © 2018 Nikita Titov
 

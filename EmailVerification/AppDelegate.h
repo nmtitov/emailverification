@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Http.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (readonly, nonatomic) Http *http;
 
 @end
 
