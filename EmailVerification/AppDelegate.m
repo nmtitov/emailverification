@@ -21,7 +21,9 @@
     [self configureHttp];
     [self configureRootController];
     
-    [self.http verifyEmail:@"nmtitov@yandex.ru" withBlock:nil];
+    [[self.http verifyEmail:@"nmtitov@yandex.ru"] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
     
     return YES;
 }

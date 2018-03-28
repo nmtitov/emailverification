@@ -16,6 +16,6 @@
 
 @property (readonly, strong, nonatomic) AFHTTPSessionManager *manager;
 
-- (NSURLSessionDataTask *)verifyEmail:(NSString *)email withBlock:(void (^)(ValidateResponse *item, NSError *error))block;
+- (RACSignal *)verifyEmail:(NSString *)email;
 
 @end
