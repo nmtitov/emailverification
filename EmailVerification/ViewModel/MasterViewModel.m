@@ -8,6 +8,7 @@
 
 #import "MasterViewModel.h"
 #import "EmailValidator.h"
+#import "NSString+isEmpty__NT.h"
 #import <ReactiveObjC/RACEXTScope.h>
 
 @interface MasterViewModel ()
@@ -33,7 +34,7 @@
     _validator = [[EmailValidator alloc] init];
     
     _isEmpty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
-        BOOL result = value.length == 0;
+        BOOL result = value.isEmpty__NT;
         return @(result);
     }];
 
