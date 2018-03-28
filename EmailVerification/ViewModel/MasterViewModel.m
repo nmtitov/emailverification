@@ -20,6 +20,7 @@
 
 - (void)ensure {
     NSParameterAssert(self.validator);
+    NSParameterAssert(self.empty);
     NSParameterAssert(self.valid);
 }
 
@@ -30,6 +31,11 @@
     }
     _validator = [[EmailValidator alloc] init];
     
+    _empty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+        BOOL result = value.length == 0;
+        return @(result);
+    }];
+
     @weakify(self);
     _valid = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
         @strongify(self);
