@@ -119,10 +119,18 @@
 		6F09881E206BF52900E6146C /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				6F09881F206BF54500E6146C /* Protocol */,
 			);
 			name = Misc;
 			path = EmailVerification/Misc;
 			sourceTree = SOURCE_ROOT;
+		};
+		6F09881F206BF54500E6146C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
 		};
 		6FB4DE6D206BCE2200D62416 = {
 			isa = PBXGroup;
