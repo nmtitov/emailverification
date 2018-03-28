@@ -10,4 +10,6 @@
 
 @interface EmailValidator : NSObject
 
+- (BOOL)evaluate:(NSString *)string;
+
 @end
