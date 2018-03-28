@@ -180,6 +180,14 @@
 			path = EmailVerification/Resources;
 			sourceTree = SOURCE_ROOT;
 		};
+		6F098835206C0C5E00E6146C /* ApiKeys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ApiKeys;
+			path = EmailVerification/ApiKeys;
+			sourceTree = SOURCE_ROOT;
+		};
 		6FB4DE6D206BCE2200D62416 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +220,7 @@
 				6FB4DEAB206BD03900D62416 /* Controller */,
 				6FB4DEAE206BD03900D62416 /* View */,
 				6F09881E206BF52900E6146C /* Misc */,
+				6F098835206C0C5E00E6146C /* ApiKeys */,
 				6F098834206C0BB500E6146C /* Resources */,
 				6FB4DE7F206BCE2300D62416 /* Main.storyboard */,
 				6FB4DE82206BCE2300D62416 /* Assets.xcassets */,
