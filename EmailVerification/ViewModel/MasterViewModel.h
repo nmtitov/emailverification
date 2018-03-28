@@ -14,9 +14,7 @@
 
 @property (copy, nonatomic) NSString *input;
 
-@property (readonly, nonatomic) RACSignal *emptyError;
-@property (readonly, nonatomic) RACSignal *formatError;
-
 @property (readonly, nonatomic) RACSignal *isValid;
+@property (readonly, nonatomic) RACSignal *status;
 
 @end

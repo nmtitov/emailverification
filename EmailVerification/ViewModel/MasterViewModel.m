@@ -27,9 +27,8 @@
     NSParameterAssert(self.isEmpty);
     NSParameterAssert(self.isValidFormat);
     
-    NSParameterAssert(self.emptyError);
-    NSParameterAssert(self.formatError);
     NSParameterAssert(self.isValid);
+    NSParameterAssert(self.status);
 }
 
 - (instancetype)init {
@@ -61,17 +60,16 @@
         return @(result);
     }];
     
-    _emptyError = [self.isEmpty map:^id _Nullable(NSNumber *value) {
-        BOOL result = value.boolValue;
-        id error = result ? NSLocalizedString(@"Email is empty", @"") : nil;
-        return error;
-    }];
-    
-    _formatError = [self.isValidFormat.not map:^id _Nullable(NSNumber *value) {
-        BOOL result = value.boolValue;
-        id error = result ? NSLocalizedString(@"Email format is invalid", @"") : nil;
-        return error;
-    }];
+    _status = [RACSignal combineLatest:@[self.isEmpty, self.isValidFormat]
+        reduce:^NSString *(NSNumber *isEmpty, NSNumber *isValidFormat) {
+            if (isEmpty.boolValue) {
+                return NSLocalizedString(@"Email is empty", @"");
+            } else if (!isValidFormat.boolValue) {
+                return NSLocalizedString(@"Email format is invalid", @"");
+            } else {
+                return NSLocalizedString(@"Email looks good", @"");
+            }
+        }];
     
     [self ensure];
     return self;
