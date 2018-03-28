@@ -11,6 +11,7 @@
 		6F098823206BF75700E6146C /* MasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098822206BF75700E6146C /* MasterViewModel.m */; };
 		6F098827206BFCD000E6146C /* EmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098826206BFCD000E6146C /* EmailValidator.m */; };
 		6F098829206C000900E6146C /* EmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098828206C000900E6146C /* EmailValidatorTests.m */; };
+		6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */; };
 		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
 		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
 		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
@@ -52,6 +53,9 @@
 		6F098825206BFCD000E6146C /* EmailValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailValidator.h; sourceTree = "<group>"; };
 		6F098826206BFCD000E6146C /* EmailValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailValidator.m; sourceTree = "<group>"; };
 		6F098828206C000900E6146C /* EmailValidatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EmailValidatorTests.m; path = EmailVerificationTests/EmailValidatorTests.m; sourceTree = SOURCE_ROOT; };
+		6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NTStringIdentifier.m"; sourceTree = "<group>"; };
+		6F09882B206C061C00E6146C /* NSObject+NTStringIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NTStringIdentifier.h"; sourceTree = "<group>"; };
+		6F09882D206C066E00E6146C /* NTStringIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTStringIdentifier.h; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				6F098820206BF57300E6146C /* Ensurable.h */,
+				6F09882D206C066E00E6146C /* NTStringIdentifier.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -148,6 +153,8 @@
 			children = (
 				6F098825206BFCD000E6146C /* EmailValidator.h */,
 				6F098826206BFCD000E6146C /* EmailValidator.m */,
+				6F09882B206C061C00E6146C /* NSObject+NTStringIdentifier.h */,
+				6F09882A206C061C00E6146C /* NSObject+NTStringIdentifier.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -449,6 +456,7 @@
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
+				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
