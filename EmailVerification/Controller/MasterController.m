@@ -7,6 +7,7 @@
 //
 
 #import "MasterController.h"
+#import "SuggestionsController.h"
 #import "Ensurable.h"
 #import "NSString+TrimmedString__NT.h"
 #import "UIColor+EmailVerification.h"
@@ -16,6 +17,7 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *inputTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) SuggestionsController *tableController;
 
 @end
 
@@ -25,6 +27,8 @@
     // IB
     NSParameterAssert(self.inputTextField);
     NSParameterAssert(self.statusLabel);
+    NSParameterAssert(self.tableController);
+    
     // Dependencies
     NSParameterAssert(self.viewModel);
 }
@@ -56,6 +60,23 @@
     RAC(self, statusLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
         return value.boolValue ? UIColor.email_verification__is_valid_text : UIColor.email_verification__is_not_valid_text;
     }];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *identifier = segue.identifier;
+    NSParameterAssert(identifier);
+    
+    if ([identifier isEqualToString:SuggestionsController.stringIdentifier]) {
+        SuggestionsController *controller = (SuggestionsController *)segue.destinationViewController;
+        NSParameterAssert(controller);
+        
+        self.tableController = controller;
+    } else {
+        NSString *message = [NSString stringWithFormat:@"Unknown segue identifier, you should write a handler first: %@", identifier];
+        NSAssert(false, message);
+    }
 }
 
 @end
