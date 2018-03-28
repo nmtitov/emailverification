@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MasterViewModel.h"
 #import "MasterController.h"
+#import "Http.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +18,17 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self configureRoot];
+    [self configureHttp];
+    [self configureRootController];
+    
     return YES;
 }
 
-- (void)configureRoot {
+- (void)configureHttp {
+    _http = [[Http alloc] init];
+}
+
+- (void)configureRootController {
     UINavigationController *navigation = (UINavigationController *)self.window.rootViewController;
     NSParameterAssert(navigation);
 

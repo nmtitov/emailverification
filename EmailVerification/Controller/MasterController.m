@@ -8,6 +8,7 @@
 
 #import "MasterController.h"
 #import "Ensurable.h"
+#import "NSString+TrimmedString__NT.h"
 #import "UIColor+EmailVerification.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
@@ -40,7 +41,9 @@
 }
 
 - (void)bind {
-    RAC(self, viewModel.input) = self.inputTextField.rac_textSignal;
+    RAC(self, viewModel.input) = [self.inputTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+        return value.trimmedString__NT;
+    }];
 }
 
 - (void)subscribe {
