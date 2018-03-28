@@ -18,6 +18,11 @@
 
 @implementation MasterViewModel
 
+- (void)ensure {
+    NSParameterAssert(self.validator);
+    NSParameterAssert(self.valid);
+}
+
 - (instancetype)init {
     self = [super init];
     if (!self) {
@@ -34,6 +39,8 @@
         BOOL result = [self.validator evaluate:value];
         return @(result);
     }];
+    
+    [self ensure];
     return self;
 }
 

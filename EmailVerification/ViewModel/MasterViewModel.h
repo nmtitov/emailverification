@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "Ensurable.h"
 
-@interface MasterViewModel : NSObject
+@interface MasterViewModel : NSObject <Ensurable>
 
 @property (copy, nonatomic) NSString *input;
 @property (readonly, nonatomic) RACSignal *valid;
