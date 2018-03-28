@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM5-ba-scH" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-ge-qyl">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-ge-qyl" userLabel="Field Container">
                                                 <rect key="frame" x="16" y="5" width="288" height="40"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-Nd-3eT">
@@ -54,7 +54,7 @@
                                                                     <constraint firstAttribute="width" constant="8" id="pq7-fc-KRz"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-gj-qMd" userLabel="Text Field Container">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-gj-qMd" userLabel="Input Container">
                                                                 <rect key="frame" x="94.5" y="0.0" width="193.5" height="40"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rR-KA-63D">
@@ -96,20 +96,30 @@
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-Te-Qv3">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="366"/>
+                                        <rect key="frame" x="0.0" y="90" width="320" height="326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="oFx-e4-YPI" kind="embed" id="URm-ro-5We"/>
                                         </connections>
                                     </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-8V-wSS" userLabel="Error Container">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7RO-gK-YBX"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="YM5-ba-scH" firstAttribute="top" secondItem="B3A-8m-frz" secondAttribute="top" id="4Cf-Y6-tFv"/>
-                                    <constraint firstItem="fUn-Te-Qv3" firstAttribute="top" secondItem="YM5-ba-scH" secondAttribute="bottom" id="7Vu-Yy-tc2"/>
+                                    <constraint firstItem="CWN-8V-wSS" firstAttribute="top" secondItem="YM5-ba-scH" secondAttribute="bottom" id="GjP-UI-whF"/>
+                                    <constraint firstAttribute="trailing" secondItem="CWN-8V-wSS" secondAttribute="trailing" id="Hq9-xm-Dpq"/>
                                     <constraint firstAttribute="bottom" secondItem="fUn-Te-Qv3" secondAttribute="bottom" id="QVA-fE-dFu"/>
+                                    <constraint firstItem="fUn-Te-Qv3" firstAttribute="top" secondItem="CWN-8V-wSS" secondAttribute="bottom" id="iF5-LL-uEZ"/>
                                     <constraint firstAttribute="trailing" secondItem="fUn-Te-Qv3" secondAttribute="trailing" id="igH-N8-fOy"/>
                                     <constraint firstItem="fUn-Te-Qv3" firstAttribute="leading" secondItem="B3A-8m-frz" secondAttribute="leading" id="odt-JL-tcE"/>
+                                    <constraint firstItem="CWN-8V-wSS" firstAttribute="leading" secondItem="B3A-8m-frz" secondAttribute="leading" id="qMY-IZ-YT4"/>
                                     <constraint firstItem="YM5-ba-scH" firstAttribute="leading" secondItem="B3A-8m-frz" secondAttribute="leading" id="wH5-Vl-GV0"/>
                                     <constraint firstAttribute="trailing" secondItem="YM5-ba-scH" secondAttribute="trailing" id="wox-7T-6Wq"/>
                                 </constraints>
