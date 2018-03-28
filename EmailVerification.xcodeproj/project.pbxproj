@@ -124,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				6F09881F206BF54500E6146C /* Protocol */,
+				6F098824206BFCAC00E6146C /* Common */,
 			);
 			name = Misc;
 			path = EmailVerification/Misc;
@@ -135,6 +136,13 @@
 				6F098820206BF57300E6146C /* Ensurable.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6F098824206BFCAC00E6146C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		6FB4DE6D206BCE2200D62416 = {
