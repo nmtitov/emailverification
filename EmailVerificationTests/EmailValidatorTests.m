@@ -44,4 +44,15 @@
     XCTAssertTrue([self.validator evaluate:@"mail@bing.com"]);
 }
 
+- (void)testInvalidEmails {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCTAssertFalse([self.validator evaluate:@""]);
+    XCTAssertFalse([self.validator evaluate:@"ale&x@gmail"]);
+    XCTAssertFalse([self.validator evaluate:@"alex"]);
+    XCTAssertFalse([self.validator evaluate:@"@gmail.com"]);
+    XCTAssertFalse([self.validator evaluate:@".com"]);
+    XCTAssertFalse([self.validator evaluate:@"."]);
+}
+
 @end
