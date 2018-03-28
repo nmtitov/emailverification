@@ -47,7 +47,7 @@
         return @(result);
     }];
     
-    _isValid = [[RACSignal combineLatest:@[self.isEmpty, self.isValidFormat]] map:^(RACTuple *tuple) {
+    _isValid = [[RACSignal combineLatest:@[self.isEmpty.not, self.isValidFormat]] map:^(RACTuple *tuple) {
         BOOL result = [tuple.rac_sequence all:^(NSNumber *value) {
             return value.boolValue;
         }];
