@@ -21,6 +21,8 @@
     [self configureHttp];
     [self configureRootController];
     
+    [self.http verifyWithBlock:nil];
+    
     return YES;
 }
 
