@@ -96,7 +96,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="YM5-ba-scH" firstAttribute="top" secondItem="B3A-8m-frz" secondAttribute="top" id="4Cf-Y6-tFv"/>
                                     <constraint firstItem="YM5-ba-scH" firstAttribute="leading" secondItem="B3A-8m-frz" secondAttribute="leading" id="wH5-Vl-GV0"/>
@@ -104,7 +104,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B3A-8m-frz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HME-EP-axd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B3A-8m-frz" secondAttribute="bottom" id="srm-Wc-jaz"/>
