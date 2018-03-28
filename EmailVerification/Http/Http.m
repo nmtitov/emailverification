@@ -37,6 +37,7 @@
     NSParameterAssert(base);
     
     _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:base];
+    _manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     
     [self ensure];
     return self;
