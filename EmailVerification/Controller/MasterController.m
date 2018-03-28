@@ -10,6 +10,9 @@
 
 @interface MasterController ()
 
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *inputTextField;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *errorLabel;
+
 @end
 
 @implementation MasterController

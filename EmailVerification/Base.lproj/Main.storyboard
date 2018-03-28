@@ -150,6 +150,10 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="zfj-xW-3Q8"/>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="Loq-kU-0Cm" id="01D-Al-KDP"/>
+                        <outlet property="inputTextField" destination="4rR-KA-63D" id="2CB-Iw-ssM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
