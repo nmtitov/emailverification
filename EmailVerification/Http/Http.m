@@ -55,7 +55,7 @@
     return self;
 }
 
-- (NSURLSessionDataTask *)verifyEmail:(NSString *)email withBlock:(void (^)(NSDictionary *reseponse, NSError *error))block {
+- (NSURLSessionDataTask *)verifyEmail:(NSString *)email withBlock:(void (^)(ValidateResponse *item, NSError *error))block {
     NSParameterAssert(email);
     NSParameterAssert(self.kickboxApiKey);
     
@@ -64,9 +64,9 @@
         @"apikey": self.kickboxApiKey
     };
     return [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, NSDictionary *JSON) {
-        NSLog(@"%@", JSON);
+        ValidateResponse *item = [[ValidateResponse alloc] initWithAttributes:JSON];
         if (block) {
-            block(nil, nil);
+            block(item, nil);
         }
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
