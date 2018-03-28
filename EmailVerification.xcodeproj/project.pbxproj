@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
-		6FB4DE7E206BCE2300D62416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7D206BCE2300D62416 /* ViewController.m */; };
 		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
 		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
 		6FB4DE86206BCE2300D62416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */; };
 		6FB4DE89206BCE2300D62416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE88206BCE2300D62416 /* main.m */; };
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
+		6FB4DEB4206BD17A00D62416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6FB4DE7C206BCE2300D62416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6FB4DE7D206BCE2300D62416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6FB4DE80206BCE2300D62416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FB4DE82206BCE2300D62416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FB4DE85206BCE2300D62416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		6FB4DE99206BCE2300D62416 /* EmailVerificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailVerificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailVerificationUITests.m; sourceTree = "<group>"; };
 		6FB4DE9F206BCE2300D62416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB4DEB2206BD17A00D62416 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6FB4DEB3206BD17A00D62416 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,10 @@
 			children = (
 				6FB4DE79206BCE2300D62416 /* AppDelegate.h */,
 				6FB4DE7A206BCE2300D62416 /* AppDelegate.m */,
-				6FB4DE7C206BCE2300D62416 /* ViewController.h */,
-				6FB4DE7D206BCE2300D62416 /* ViewController.m */,
+				6FB4DEAD206BD03900D62416 /* Model */,
+				6FB4DEAC206BD03900D62416 /* ViewModel */,
+				6FB4DEAB206BD03900D62416 /* Controller */,
+				6FB4DEAE206BD03900D62416 /* View */,
 				6FB4DE7F206BCE2300D62416 /* Main.storyboard */,
 				6FB4DE82206BCE2300D62416 /* Assets.xcassets */,
 				6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */,
@@ -134,6 +136,40 @@
 			name = EmailVerificationUITests;
 			path = /Users/nt/dev/mac/my/EmailVerification/EmailVerificationUITests;
 			sourceTree = "<absolute>";
+		};
+		6FB4DEAB206BD03900D62416 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FB4DEB3206BD17A00D62416 /* ViewController.h */,
+				6FB4DEB2206BD17A00D62416 /* ViewController.m */,
+			);
+			name = Controller;
+			path = EmailVerification/Controller;
+			sourceTree = SOURCE_ROOT;
+		};
+		6FB4DEAC206BD03900D62416 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			path = EmailVerification/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		6FB4DEAD206BD03900D62416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = EmailVerification/Model;
+			sourceTree = SOURCE_ROOT;
+		};
+		6FB4DEAE206BD03900D62416 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = EmailVerification/View;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -268,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB4DE7E206BCE2300D62416 /* ViewController.m in Sources */,
+				6FB4DEB4206BD17A00D62416 /* ViewController.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 			);
