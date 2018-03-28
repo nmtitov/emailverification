@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM5-ba-scH" userLabel="Header">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-ge-qyl">
-                                                <rect key="frame" x="16" y="20" width="288" height="40"/>
+                                                <rect key="frame" x="16" y="5" width="288" height="40"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-Nd-3eT">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -34,8 +34,8 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-d7-xOg">
-                                                                        <rect key="frame" x="0.0" y="10.5" width="86.5" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="11" width="86.5" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -57,10 +57,10 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-gj-qMd" userLabel="Text Field Container">
                                                                 <rect key="frame" x="94.5" y="0.0" width="193.5" height="40"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rR-KA-63D">
-                                                                        <rect key="frame" x="0.0" y="5" width="193.5" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rR-KA-63D">
+                                                                        <rect key="frame" x="0.0" y="11" width="193.5" height="18"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                                                     </textField>
                                                                 </subviews>
@@ -91,12 +91,13 @@
                                         <constraints>
                                             <constraint firstItem="fN8-ge-qyl" firstAttribute="centerY" secondItem="YM5-ba-scH" secondAttribute="centerY" id="Fs8-yx-xKQ"/>
                                             <constraint firstAttribute="trailing" secondItem="fN8-ge-qyl" secondAttribute="trailing" constant="16" id="KEX-4x-JIy"/>
-                                            <constraint firstAttribute="height" constant="80" id="eeF-KY-0Vq"/>
+                                            <constraint firstAttribute="height" constant="50" id="eeF-KY-0Vq"/>
                                             <constraint firstItem="fN8-ge-qyl" firstAttribute="leading" secondItem="YM5-ba-scH" secondAttribute="leading" constant="16" id="p2v-B1-201"/>
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-Te-Qv3">
-                                        <rect key="frame" x="0.0" y="80" width="320" height="336"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="366"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="oFx-e4-YPI" kind="embed" id="URm-ro-5We"/>
                                         </connections>
@@ -140,7 +141,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hv0-n3-t47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cJc-4Q-ea5">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
