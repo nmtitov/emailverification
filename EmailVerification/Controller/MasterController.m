@@ -40,6 +40,11 @@
     [self subscribe];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.inputTextField becomeFirstResponder];
+}
+
 - (void)bind {
     RAC(self, viewModel.input) = [self.inputTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
         return value.trimmedString__NT;
