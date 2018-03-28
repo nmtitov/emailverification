@@ -8,6 +8,7 @@
 
 #import "MasterController.h"
 #import "Ensurable.h"
+#import "UIColor+EmailVerification.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
 @interface MasterController ()
@@ -44,7 +45,7 @@
 
 - (void)subscribe {
     RAC(self, errorLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
-        return value.boolValue ? UIColor.greenColor : UIColor.redColor;
+        return value.boolValue ? UIColor.email_verification__is_valid_text : UIColor.email_verification__is_not_valid_text;
     }];
 }
 
