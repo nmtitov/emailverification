@@ -25,11 +25,11 @@
     UINavigationController *navigation = (UINavigationController *)self.window.rootViewController;
     NSParameterAssert(navigation);
 
-    MasterController *root = (MasterController *)navigation.topViewController;    
-    NSParameterAssert(root);
+    MasterController *controller = (MasterController *)navigation.topViewController;    
+    NSParameterAssert(controller);
     
     MasterViewModel *viewModel = [[MasterViewModel alloc] init];
-    [root setViewModel:viewModel];
+    [controller setViewModel:viewModel];
 }
 
 @end
