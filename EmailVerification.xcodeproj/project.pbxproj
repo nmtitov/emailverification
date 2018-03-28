@@ -191,6 +191,14 @@
 			path = EmailVerification/ApiKeys;
 			sourceTree = SOURCE_ROOT;
 		};
+		6F09883A206C13B300E6146C /* Http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Http;
+			path = EmailVerification/Http;
+			sourceTree = SOURCE_ROOT;
+		};
 		6FB4DE6D206BCE2200D62416 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +226,7 @@
 			children = (
 				6FB4DE79206BCE2300D62416 /* AppDelegate.h */,
 				6FB4DE7A206BCE2300D62416 /* AppDelegate.m */,
+				6F09883A206C13B300E6146C /* Http */,
 				6FB4DEAD206BD03900D62416 /* Model */,
 				6FB4DEAC206BD03900D62416 /* ViewModel */,
 				6FB4DEAB206BD03900D62416 /* Controller */,
