@@ -8,6 +8,7 @@
 
 #import "Http.h"
 #import "Error.h"
+#import "NSString+TrimmedString__NT.h"
 #import <ReactiveObjC/RACEXTScope.h>
 #import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
 
@@ -36,7 +37,7 @@
         @throw [Error projectConfigurationError];
     }
     NSError *error;
-    _kickboxApiKey = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+    _kickboxApiKey = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
     if (!_kickboxApiKey) {
         @throw [Error projectConfigurationError];
     }
@@ -61,9 +62,7 @@
         @"email": @"nmtitov@gmail.ru",
         @"apikey": self.kickboxApiKey
     };
-    return [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
-//        NSArray *postsFromResponse = [JSON valueForKeyPath:@"data"];
-        
+    return [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, NSDictionary *JSON) {
         if (block) {
             block(nil, nil);
         }
