@@ -15,7 +15,7 @@
 @interface MasterController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *inputTextField;
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *errorLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -24,7 +24,7 @@
 - (void)ensure {
     // IB
     NSParameterAssert(self.inputTextField);
-    NSParameterAssert(self.errorLabel);
+    NSParameterAssert(self.statusLabel);
     // Dependencies
     NSParameterAssert(self.viewModel);
 }
@@ -40,6 +40,11 @@
     [self subscribe];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.inputTextField becomeFirstResponder];
+}
+
 - (void)bind {
     RAC(self, viewModel.input) = [self.inputTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
         return value.trimmedString__NT;
@@ -47,7 +52,8 @@
 }
 
 - (void)subscribe {
-    RAC(self, errorLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
+    RAC(self, statusLabel.text) = self.viewModel.status;
+    RAC(self, statusLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
         return value.boolValue ? UIColor.email_verification__is_valid_text : UIColor.email_verification__is_not_valid_text;
     }];
 }

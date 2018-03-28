@@ -15,6 +15,9 @@
 
 @property (readonly, nonatomic) EmailValidator *validator;
 
+@property (readonly, nonatomic) RACSignal *isEmpty;
+@property (readonly, nonatomic) RACSignal *isValidFormat;
+
 @end
 
 @implementation MasterViewModel
@@ -23,7 +26,9 @@
     NSParameterAssert(self.validator);
     NSParameterAssert(self.isEmpty);
     NSParameterAssert(self.isValidFormat);
+    
     NSParameterAssert(self.isValid);
+    NSParameterAssert(self.status);
 }
 
 - (instancetype)init {
@@ -54,6 +59,17 @@
         }];
         return @(result);
     }];
+    
+    _status = [RACSignal combineLatest:@[self.isEmpty, self.isValidFormat]
+        reduce:^NSString *(NSNumber *isEmpty, NSNumber *isValidFormat) {
+            if (isEmpty.boolValue) {
+                return NSLocalizedString(@"Email is empty", @"");
+            } else if (!isValidFormat.boolValue) {
+                return NSLocalizedString(@"Email format is invalid", @"");
+            } else {
+                return NSLocalizedString(@"Email looks good", @"");
+            }
+        }];
     
     [self ensure];
     return self;

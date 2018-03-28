@@ -13,8 +13,8 @@
 @interface MasterViewModel : NSObject <Ensurable>
 
 @property (copy, nonatomic) NSString *input;
-@property (readonly, nonatomic) RACSignal *isEmpty;
-@property (readonly, nonatomic) RACSignal *isValidFormat;
+
 @property (readonly, nonatomic) RACSignal *isValid;
+@property (readonly, nonatomic) RACSignal *status;
 
 @end

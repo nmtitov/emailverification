@@ -151,7 +151,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
-                        <outlet property="errorLabel" destination="Loq-kU-0Cm" id="01D-Al-KDP"/>
+                        <outlet property="statusLabel" destination="Loq-kU-0Cm" id="01D-Al-KDP"/>
                         <outlet property="inputTextField" destination="4rR-KA-63D" id="2CB-Iw-ssM"/>
                     </connections>
                 </viewController>
