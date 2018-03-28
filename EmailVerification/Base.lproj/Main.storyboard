@@ -104,9 +104,20 @@
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-8V-wSS" userLabel="Error Container">
                                         <rect key="frame" x="0.0" y="50" width="320" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-kU-0Cm">
+                                                <rect key="frame" x="16" y="12" width="288" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="Loq-kU-0Cm" firstAttribute="leading" secondItem="CWN-8V-wSS" secondAttribute="leading" constant="16" id="0Hb-Bg-irM"/>
                                             <constraint firstAttribute="height" constant="40" id="7RO-gK-YBX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Loq-kU-0Cm" secondAttribute="trailing" constant="16" id="8Cj-jA-9iR"/>
+                                            <constraint firstItem="Loq-kU-0Cm" firstAttribute="centerY" secondItem="CWN-8V-wSS" secondAttribute="centerY" id="PUw-0U-Tdw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
