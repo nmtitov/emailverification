@@ -2,7 +2,7 @@
 
 ## Task
 
-"Build an incredible experience for users entering a single email address into a text field, while at the same time impressing us with how simple and clean your code is".
+> Build an incredible experience for users entering a single email address into a text field, while at the same time impressing us with how simple and clean your code is.
 
 ## Process
 
