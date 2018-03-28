@@ -6,7 +6,8 @@ target 'EmailVerification' do
   # use_frameworks!
 
   # Pods for EmailVerification
-
+  pod 'ReactiveObjC', '~> 3.1.0'
+  
   target 'EmailVerificationTests' do
     inherit! :search_paths
     # Pods for testing
