@@ -55,14 +55,16 @@
     return self;
 }
 
-- (NSURLSessionDataTask *)verifyWithBlock:(void (^)(NSDictionary *reseponse, NSError *error))block {
+- (NSURLSessionDataTask *)verifyEmail:(NSString *)email withBlock:(void (^)(NSDictionary *reseponse, NSError *error))block {
+    NSParameterAssert(email);
     NSParameterAssert(self.kickboxApiKey);
     
     id parameters = @{
-        @"email": @"nmtitov@gmail.ru",
+        @"email": email,
         @"apikey": self.kickboxApiKey
     };
     return [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, NSDictionary *JSON) {
+        NSLog(@"%@", JSON);
         if (block) {
             block(nil, nil);
         }

@@ -21,7 +21,7 @@
     [self configureHttp];
     [self configureRootController];
     
-    [self.http verifyWithBlock:nil];
+    [self.http verifyEmail:@"nmtitov@yandex.ru" withBlock:nil];
     
     return YES;
 }
