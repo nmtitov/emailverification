@@ -20,6 +20,8 @@
 		6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098847206C175E00E6146C /* NSString+isEmpty__NT.m */; };
 		6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098849206C175E00E6146C /* NSString+isMatching__NT.m */; };
 		6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09884B206C175E00E6146C /* NSString+TrimmedString__NT.m */; };
+		6F098853206C29B700E6146C /* SuggestionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098852206C29B700E6146C /* SuggestionsController.m */; };
+		6F098856206C335600E6146C /* ValidateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098855206C335600E6146C /* ValidateResponse.m */; };
 		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
 		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
 		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
@@ -79,6 +81,10 @@
 		6F098849206C175E00E6146C /* NSString+isMatching__NT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+isMatching__NT.m"; sourceTree = "<group>"; };
 		6F09884A206C175E00E6146C /* NSString+TrimmedString__NT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimmedString__NT.h"; sourceTree = "<group>"; };
 		6F09884B206C175E00E6146C /* NSString+TrimmedString__NT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimmedString__NT.m"; sourceTree = "<group>"; };
+		6F098851206C29B700E6146C /* SuggestionsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsController.h; sourceTree = "<group>"; };
+		6F098852206C29B700E6146C /* SuggestionsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsController.m; sourceTree = "<group>"; };
+		6F098854206C335600E6146C /* ValidateResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidateResponse.h; sourceTree = "<group>"; };
+		6F098855206C335600E6146C /* ValidateResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidateResponse.m; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -308,6 +314,8 @@
 			children = (
 				6FB4DEB3206BD17A00D62416 /* MasterController.h */,
 				6FB4DEB2206BD17A00D62416 /* MasterController.m */,
+				6F098851206C29B700E6146C /* SuggestionsController.h */,
+				6F098852206C29B700E6146C /* SuggestionsController.m */,
 			);
 			name = Controller;
 			path = EmailVerification/Controller;
@@ -326,6 +334,8 @@
 		6FB4DEAD206BD03900D62416 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F098854206C335600E6146C /* ValidateResponse.h */,
+				6F098855206C335600E6146C /* ValidateResponse.m */,
 			);
 			name = Model;
 			path = EmailVerification/Model;
@@ -537,6 +547,7 @@
 				6F098823206BF75700E6146C /* MasterViewModel.m in Sources */,
 				6F09883D206C142A00E6146C /* Http.m in Sources */,
 				6F098827206BFCD000E6146C /* EmailValidator.m in Sources */,
+				6F098856206C335600E6146C /* ValidateResponse.m in Sources */,
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6F09884D206C175E00E6146C /* NSString+hasContent__NT.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
@@ -544,6 +555,7 @@
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 				6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */,
 				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
+				6F098853206C29B700E6146C /* SuggestionsController.m in Sources */,
 				6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */,
 				6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */,
 			);

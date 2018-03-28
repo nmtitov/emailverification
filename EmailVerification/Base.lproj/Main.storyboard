@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="90" width="320" height="326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="oFx-e4-YPI" kind="embed" id="URm-ro-5We"/>
+                                            <segue destination="oFx-e4-YPI" kind="embed" identifier="SuggestionsController" id="URm-ro-5We"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-8V-wSS" userLabel="Error Container">
@@ -151,18 +151,18 @@
                     </navigationItem>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
-                        <outlet property="statusLabel" destination="Loq-kU-0Cm" id="01D-Al-KDP"/>
                         <outlet property="inputTextField" destination="4rR-KA-63D" id="2CB-Iw-ssM"/>
+                        <outlet property="statusLabel" destination="Loq-kU-0Cm" id="01D-Al-KDP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478.39999999999998" y="133.13343328335833"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Suggestions Controller-->
         <scene sceneID="B8J-rp-eSI">
             <objects>
-                <tableViewController id="oFx-e4-YPI" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SuggestionsController" id="oFx-e4-YPI" customClass="SuggestionsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hv0-n3-t47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

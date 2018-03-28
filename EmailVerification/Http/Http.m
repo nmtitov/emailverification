@@ -55,7 +55,7 @@
     return self;
 }
 
-- (NSURLSessionDataTask *)verifyEmail:(NSString *)email withBlock:(void (^)(NSDictionary *reseponse, NSError *error))block {
+- (RACSignal *)verifyEmail:(NSString *)email {
     NSParameterAssert(email);
     NSParameterAssert(self.kickboxApiKey);
     
@@ -63,15 +63,20 @@
         @"email": email,
         @"apikey": self.kickboxApiKey
     };
-    return [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, NSDictionary *JSON) {
-        NSLog(@"%@", JSON);
-        if (block) {
-            block(nil, nil);
-        }
-    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
-        if (block) {
-            block(nil, error);
-        }
+    
+    @weakify(self);
+    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        @strongify(self);
+        NSURLSessionDataTask *task = [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, id item) {
+            [subscriber sendNext:item];
+            [subscriber sendCompleted];
+        } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+            [subscriber sendError:error];
+        }];
+        [task resume];
+        return [RACDisposable disposableWithBlock:^{
+            [task cancel];
+        }];
     }];
 }
 
