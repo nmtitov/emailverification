@@ -43,7 +43,7 @@
 }
 
 - (void)subscribe {
-    RAC(self, errorLabel.textColor) = [self.viewModel.valid map:^UIColor *(NSNumber *value) {
+    RAC(self, errorLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
         return value.boolValue ? UIColor.greenColor : UIColor.redColor;
     }];
 }

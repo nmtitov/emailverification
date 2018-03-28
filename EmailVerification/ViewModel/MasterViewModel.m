@@ -20,8 +20,9 @@
 
 - (void)ensure {
     NSParameterAssert(self.validator);
-    NSParameterAssert(self.empty);
-    NSParameterAssert(self.valid);
+    NSParameterAssert(self.isEmpty);
+    NSParameterAssert(self.isValidFormat);
+    NSParameterAssert(self.isValid);
 }
 
 - (instancetype)init {
@@ -31,18 +32,25 @@
     }
     _validator = [[EmailValidator alloc] init];
     
-    _empty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+    _isEmpty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
         BOOL result = value.length == 0;
         return @(result);
     }];
 
     @weakify(self);
-    _valid = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
+    _isValidFormat = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
         @strongify(self);
         if (!value) {
             return false;
         }
         BOOL result = [self.validator evaluate:value];
+        return @(result);
+    }];
+    
+    _isValid = [[RACSignal combineLatest:@[self.isEmpty, self.isValidFormat]] map:^(RACTuple *tuple) {
+        BOOL result = [tuple.rac_sequence all:^(NSNumber *value) {
+            return value.boolValue;
+        }];
         return @(result);
     }];
     
