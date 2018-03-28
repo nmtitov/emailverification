@@ -21,7 +21,9 @@
     [self configureHttp];
     [self configureRootController];
     
-    [[self.http verifyEmail:@"nmtitov@yandex.ru"] subscribeNext:^(id  _Nullable x) {
+    [[[self.http verifyEmail:@"nmtitov@yandex.ru"] map:^id _Nullable(id  _Nullable value) {
+        return [[ValidateResponse alloc] initWithAttributes:value];
+    }] subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@", x);
     }];
     

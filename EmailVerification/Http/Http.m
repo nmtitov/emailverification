@@ -67,8 +67,7 @@
     @weakify(self);
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         @strongify(self);
-        NSURLSessionDataTask *task = [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, NSDictionary *JSON) {
-            ValidateResponse *item = [[ValidateResponse alloc] initWithAttributes:JSON];
+        NSURLSessionDataTask *task = [self.manager GET:@"verify" parameters:parameters progress:nil success:^(NSURLSessionDataTask * __unused task, id item) {
             [subscriber sendNext:item];
             [subscriber sendCompleted];
         } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
