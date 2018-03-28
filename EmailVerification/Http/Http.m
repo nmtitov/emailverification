@@ -9,6 +9,7 @@
 #import "Http.h"
 #import "Error.h"
 #import <ReactiveObjC/RACEXTScope.h>
+#import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
 
 @interface Http ()
 
@@ -47,6 +48,8 @@
     _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:base];
     _manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+
     [self ensure];
     return self;
 }
