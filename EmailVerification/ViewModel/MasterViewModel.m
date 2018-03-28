@@ -39,37 +39,30 @@
     _validator = [[EmailValidator alloc] init];
     
     _isEmpty = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
-        BOOL result = value.isEmpty__NT;
-        return @(result);
+        return @(value.isEmpty__NT);
     }];
 
     @weakify(self);
     _isValidFormat = [RACObserve(self, input) map:^id _Nullable(NSString * _Nullable value) {
         @strongify(self);
-        if (!value) {
-            return false;
-        }
-        BOOL result = [self.validator evaluate:value];
-        return @(result);
+        return @([self.validator evaluate:value]);
     }];
     
     _isValid = [[RACSignal combineLatest:@[self.isEmpty.not, self.isValidFormat]] map:^(RACTuple *tuple) {
-        BOOL result = [tuple.rac_sequence all:^(NSNumber *value) {
+        return @([tuple.rac_sequence all:^(NSNumber *value) {
             return value.boolValue;
-        }];
-        return @(result);
+        }]);
     }];
     
-    _status = [RACSignal combineLatest:@[self.isEmpty, self.isValidFormat]
-        reduce:^NSString *(NSNumber *isEmpty, NSNumber *isValidFormat) {
-            if (isEmpty.boolValue) {
-                return NSLocalizedString(@"Email is empty", @"");
-            } else if (!isValidFormat.boolValue) {
-                return NSLocalizedString(@"Email format is invalid", @"");
-            } else {
-                return NSLocalizedString(@"Email looks good", @"");
-            }
-        }];
+    _status = [RACSignal combineLatest:@[self.isEmpty, self.isValidFormat] reduce:^NSString *(NSNumber *isEmpty, NSNumber *isValidFormat) {
+        if (isEmpty.boolValue) {
+            return NSLocalizedString(@"Email is empty", @"");
+        } else if (!isValidFormat.boolValue) {
+            return NSLocalizedString(@"Email format is invalid", @"");
+        } else {
+            return NSLocalizedString(@"Email looks good", @"");
+        }
+    }];
     
     [self ensure];
     return self;
