@@ -50,9 +50,9 @@
         @throw [Error projectConfigurationError];
     }
     NSArray *domains = [string componentsSeparatedByString:@"\n"];
-    self.all = domains;
+    _all = domains;
     
-    self.top = @[
+    _top = @[
         @"gmail.com",
         @"yahoo.com",
         @"yandex.ru",
