@@ -75,7 +75,6 @@
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
     
-    // Is Valid?
     _isValid = [RACSignal merge:@[self.deliverable, self.isValidFormat]];
     
     // Status
