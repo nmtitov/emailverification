@@ -18,14 +18,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self configureHttp];
+    _http = [[Http alloc] init];
     [self configureRootController];
     
     return YES;
-}
-
-- (void)configureHttp {
-    _http = [[Http alloc] init];
 }
 
 - (void)configureRootController {
