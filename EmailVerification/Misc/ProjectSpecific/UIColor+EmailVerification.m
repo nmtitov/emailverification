@@ -11,17 +11,12 @@
 
 @implementation UIColor (EmailVerification)
 
-/*
- Using iOS palette colors.
- See https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
- */
-
 + (instancetype)email_verification__is_valid_text {
-    return [UIColor colorWithHexString:@"5ddc64"];
+    return [UIColor colorWithHexString:@"15aa46"];
 }
 
 + (instancetype)email_verification__is_not_valid_text {
-    return [UIColor colorWithHexString:@"f63939"];
+    return [UIColor colorWithHexString:@"fa3e3d"];
 }
 
 @end
