@@ -73,12 +73,8 @@
     [self.suggested removeAllObjects];
     
     NSRange range = [input rangeOfString:@"@"];
-    if (range.location == NSNotFound) {
-        NSLog(@"@ sign was not found, keep suggestions empty");
-    } else {
+    if (range.location != NSNotFound) {
         NSUInteger location = range.location + 1;
-        NSLog(@"position %lu", (unsigned long)location);
-        
         NSString *substring = [input substringFromIndex:location];
         if (substring.isEmpty__NT) {
             [self.suggested addObjectsFromArray:self.top];
