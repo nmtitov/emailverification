@@ -10,8 +10,12 @@
 #import "SuggestionsDataSource.h"
 #import "Error.h"
 #import "NSString+TrimmedString__NT.h"
+#import "NSString+isEmpty__NT.h"
+#import "SuggestionsCell.h"
 
 @interface SuggestionsDataSource ()
+
+@property (strong, nonatomic) NSMutableArray *suggested;
 
 @property (strong, nonatomic) NSArray *all;
 @property (strong, nonatomic) NSArray *top;
@@ -23,7 +27,6 @@
 - (void)ensure {
     NSParameterAssert(self.all);
     NSParameterAssert(self.top);
-    NSParameterAssert(self.domainInput);
 }
 
 - (instancetype)init {
@@ -52,17 +55,33 @@
         @"mail.ru"
     ];
     
-    self.domainInput = @"";
-    
     return self;
 }
 
+- (void)setInput:(NSString *)input {
+    [self.suggested removeAllObjects];
+    if (input.isEmpty__NT) {
+        [self.suggested addObjectsFromArray:self.top];
+    } else {
+        NSArray *matching = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"STARTSWITH %@", input]];
+        [self.suggested addObjectsFromArray:matching];
+    }
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSString *)itemAt:(NSInteger)index {
+    return self.suggested[index];
+}
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return nil;
+    SuggestionsCell *cell = (SuggestionsCell *)[tableView dequeueReusableCellWithIdentifier:SuggestionsCell.stringIdentifier forIndexPath:indexPath];
+    cell.title = [self itemAt:indexPath.row];
+    return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.suggested.count;
 }
 
 @end
