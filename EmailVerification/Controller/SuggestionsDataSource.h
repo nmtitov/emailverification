@@ -15,4 +15,6 @@
 
 - (void)setController:(UITableViewController *)controller;
 
+- (NSString *)itemAt:(NSInteger)index;
+
 @end

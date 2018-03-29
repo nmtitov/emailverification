@@ -7,13 +7,6 @@
 //
 
 #import "SuggestionsController.h"
-#import "SuggestionsDelegate.h"
-
-@interface SuggestionsController ()
-
-@property (strong, nonatomic) IBOutlet SuggestionsDelegate *delegateObject;
-
-@end
 
 @implementation SuggestionsController
 
@@ -25,11 +18,13 @@
     NSParameterAssert(self.tableView.delegate);
     // Child
     [self.dataSourceObject ensure];
+    [self.delegateObject ensure];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.dataSourceObject setController:self];
+    [self.delegateObject setDataSource:self.dataSourceObject];
     [self ensure];
 }
 

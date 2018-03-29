@@ -7,11 +7,21 @@
 //
 
 #import "SuggestionsDelegate.h"
+#import "MasterController.h"
+#import "SuggestionsDataSource.h"
 
 @implementation SuggestionsDelegate
 
+- (void)ensure {
+    NSCParameterAssert(self.dataSource);
+}
+
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSString *item = [self.dataSource itemAt:indexPath.row];
+    [self.delegate didSelectSuggestion:item];
+    [tableView reloadData];
 }
 
 @end

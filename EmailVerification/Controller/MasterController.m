@@ -40,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableController.delegateObject.delegate = self;
     [self ensure];
     [self bind];
     [self subscribe];
@@ -56,7 +57,6 @@
     }];
     RAC(self, viewModel.input) = input;
     RAC(self, tableController.dataSourceObject.input) = input;
-
 }
 
 - (void)subscribe {
@@ -64,6 +64,19 @@
     RAC(self, statusLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
         return value.boolValue ? UIColor.email_verification__is_valid_text : UIColor.email_verification__is_not_valid_text;
     }];
+}
+
+#pragma mark - SuggestionsSelectionDelegate
+
+- (void)didSelectSuggestion:(NSString *)suggestion {
+    NSString *current = self.inputTextField.text.trimmedString__NT;
+    NSRange range = [current rangeOfString:@"@"];
+    if (range.location != NSNotFound) {
+        NSUInteger location = range.location + 1;
+        NSString *substring = [current substringToIndex:location];
+        NSString *new = [NSString stringWithFormat:@"%@%@", substring, suggestion];
+        self.inputTextField.text = new;
+    }
 }
 
 #pragma mark - Navigation

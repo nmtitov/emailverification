@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ensurable.h"
+#import "SuggestionsSelectionDelegate.h"
 
-@interface SuggestionsDelegate : NSObject <UITableViewDelegate>
+@class MasterController, SuggestionsDataSource;
+@interface SuggestionsDelegate : NSObject <UITableViewDelegate, Ensurable>
+
+@property(weak, nonatomic) SuggestionsDataSource *dataSource;
+@property(weak, nonatomic) id<SuggestionsSelectionDelegate> delegate;
 
 @end
