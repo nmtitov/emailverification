@@ -62,17 +62,17 @@
         return @([self.validator evaluate:value]);
     }];
     
-    _deliverable = [[[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
+    _deliverable = [[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
     }] throttle:0.3] filter:^BOOL(NSString *value) {
         return value.hasContent__NT;
     }] map:^RACSignal *(id value) {
         @strongify(self);
-        return [self.http verifyEmail:value];
-    }] switchToLatest] tryMap:^id(id value, NSError **errorPtr) {
-        return [[ValidateResponse alloc] initWithAttributes:value];
-    }] map:^id _Nullable(ValidateResponse *value) {
+        return [[self.http verifyEmail:value] tryMap:^id(id value, NSError **errorPtr) {
+            return [[ValidateResponse alloc] initWithAttributes:value];
+        }];
+    }] switchToLatest] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:self.errors];
     
