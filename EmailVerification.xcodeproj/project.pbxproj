@@ -32,6 +32,7 @@
 		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
 		6FF779EE206CE3C000C8BB2A /* SuggestionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */; };
 		6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */; };
+		6FF779F3206CE50800C8BB2A /* free.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF779F2206CE50800C8BB2A /* free.txt */; };
 		88118B31B065F5A539714D9A /* libPods-EmailVerificationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */; };
 		BC4907A89F2123AAFB630BE4 /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDataSource.m; sourceTree = "<group>"; };
 		6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsDelegate.h; sourceTree = "<group>"; };
 		6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDelegate.m; sourceTree = "<group>"; };
+		6FF779F2206CE50800C8BB2A /* free.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = free.txt; sourceTree = "<group>"; };
 		72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.release.xcconfig"; sourceTree = "<group>"; };
 		D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 		6F098834206C0BB500E6146C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6FF779F2206CE50800C8BB2A /* free.txt */,
 			);
 			name = Resources;
 			path = EmailVerification/Resources;
@@ -472,6 +475,7 @@
 				6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */,
 				6F098839206C0E0700E6146C /* kickbox.txt in Resources */,
 				6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */,
+				6FF779F3206CE50800C8BB2A /* free.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
