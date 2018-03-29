@@ -56,15 +56,23 @@
         return @([self.validator evaluate:value]);
     }];
     
-    _deliverable = [[[[[[input throttle:0.3] filter:^BOOL(id  _Nullable value) {
+    _deliverable = [[[[[input map:^id(NSString *value) {
+        if ([self.validator evaluate:value]) {
+            return value;
+        }
+        return nil;
+    }] map:^RACSignal *(NSString *value) {
         @strongify(self);
-        return [self.validator evaluate:value];
-    }] map:^RACSignal *(id value) {
-        @strongify(self);
+        if (!value) {
+            return [RACSignal return:nil];
+        }
         return [[self.http verifyEmail:value] tryMap:^id(id value, NSError **errorPtr) {
             return [[ValidateResponse alloc] initWithAttributes:value];
         }];
     }] switchToLatest] map:^id _Nullable(ValidateResponse *value) {
+        if (!value) {
+            return nil;
+        }
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
     
@@ -79,7 +87,9 @@
     RACSignal *formatStatus = [isValidFormat map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
     }];
-    RACSignal *deliverableStatus = [self.deliverable map:^NSString *(NSNumber *value) {
+    RACSignal *deliverableStatus = [[self.deliverable filter:^BOOL(id value) {
+        return value != nil;
+    }] map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Success! Email seems to be deliverable!", @"") : NSLocalizedString(@"Undeliverable", @"");
     }];
     _status = [RACSignal merge:@[deliverableStatus, emptyStatus, formatStatus]];
