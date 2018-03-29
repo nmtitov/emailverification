@@ -17,6 +17,7 @@
 9. Defined project-specific colors via category.
 10. Created custom NSError subclass.
 11. Show string status of validation.
+12. Add deliverable verification using kickbox.io API. Update status messages and colors behavior based on deliverable status. Ignore deliverable errors.
 
 © 2018 Nikita Titov
 
