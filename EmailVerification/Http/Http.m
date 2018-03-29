@@ -30,29 +30,31 @@
     if (!self) {
         return nil;
     }
-    
-    // Get API key
+
+    _kickboxApiKey = [self loadApiKey];
+    _manager = [self createManager];
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+
+    [self ensure];
+    return self;
+}
+
+- (NSString *)loadApiKey {
     NSURL *url = [NSBundle.mainBundle URLForResource:@"kickbox" withExtension:@"txt"];
     if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
         @throw [Error projectConfigurationError];
     }
     NSError *error;
-    _kickboxApiKey = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
-    if (!_kickboxApiKey) {
-        @throw [Error projectConfigurationError];
-    }
-    
-    // Configure manager
+    return [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
+}
+
+- (AFHTTPSessionManager *)createManager {
     NSURL *base = [NSURL URLWithString:@"https://api.kickbox.com/v2/"];
     NSParameterAssert(base);
     
-    _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:base];
-    _manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-    
-    [[AFNetworkActivityLogger sharedLogger] startLogging];
-
-    [self ensure];
-    return self;
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:base];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    return manager;
 }
 
 - (RACSignal *)verifyEmail:(NSString *)email {
