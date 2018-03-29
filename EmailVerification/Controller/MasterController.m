@@ -76,6 +76,7 @@
         NSString *substring = [current substringToIndex:location];
         NSString *new = [NSString stringWithFormat:@"%@%@", substring, suggestion];
         self.inputTextField.text = new;
+        [self.inputTextField sendActionsForControlEvents:UIControlEventAllEvents];
     }
 }
 
