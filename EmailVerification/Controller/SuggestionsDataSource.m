@@ -23,6 +23,7 @@
 - (void)ensure {
     NSParameterAssert(self.all);
     NSParameterAssert(self.top);
+    NSParameterAssert(self.input);
 }
 
 - (instancetype)init {
@@ -50,6 +51,8 @@
         @"yandex.ru",
         @"mail.ru"
     ];
+    
+    self.input = @"";
     
     return self;
 }
