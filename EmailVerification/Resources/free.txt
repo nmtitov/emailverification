@@ -4190,7 +4190,9 @@ xww.ro
 xy9ce.tk
 xyzfree.net
 y7mail.com
-yaho.com
+yahoo.com
+yandex.com
+yandex.ru
 yahoo.ae
 yahoo.at
 yahoo.be
@@ -4206,7 +4208,6 @@ yahoo.co.nz
 yahoo.co.th
 yahoo.co.uk
 yahoo.co.za
-yahoo.com
 yahoo.com.ar
 yahoo.com.au
 yahoo.com.br
@@ -4240,8 +4241,7 @@ yahoo.pt
 yahoo.ro
 yahoo.ru
 yahoo.se
-yandex.com
-yandex.ru
+yaho.com
 yandex.ua
 yandex.kz
 ya.ru
