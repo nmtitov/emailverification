@@ -39,18 +39,7 @@
     
     _suggested = [[NSMutableArray alloc] init];
     
-    // Get API key
-    NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
-    if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
-        @throw [Error projectConfigurationError];
-    }
-    NSError *error;
-    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
-    if (!string) {
-        @throw [Error projectConfigurationError];
-    }
-    NSArray *domains = [string componentsSeparatedByString:@"\n"];
-    _all = domains;
+    _all = [self loadDomains];
     
     _top = @[
         @"gmail.com",
@@ -60,6 +49,19 @@
     ];
     
     return self;
+}
+
+- (NSArray *)loadDomains {
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
+    if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
+        @throw [Error projectConfigurationError];
+    }
+    NSError *error;
+    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
+    if (!string) {
+        @throw [Error projectConfigurationError];
+    }
+    return [string componentsSeparatedByString:@"\n"];
 }
 
 - (void)fetchSuggestionsForInput:(NSString *)input {
@@ -79,6 +81,8 @@
         }
     }
 }
+
+#pragma mark - Helper
 
 - (NSInteger)numberOfItems {
     return self.suggested.count;
