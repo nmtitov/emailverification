@@ -55,6 +55,8 @@
         return value.trimmedString__NT;
     }];
     RAC(self, viewModel.input) = input;
+    RAC(self, tableController.dataSourceObject.input) = input;
+
 }
 
 - (void)subscribe {

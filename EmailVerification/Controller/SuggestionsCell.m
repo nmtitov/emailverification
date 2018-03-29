@@ -7,7 +7,6 @@
 //
 
 #import "SuggestionsCell.h"
-#import "NSObject+NTStringIdentifier.h"
 
 @interface SuggestionsCell ()
 

@@ -7,12 +7,10 @@
 //
 
 #import "SuggestionsController.h"
-#import "SuggestionsDataSource.h"
 #import "SuggestionsDelegate.h"
 
 @interface SuggestionsController ()
 
-@property (strong, nonatomic) IBOutlet SuggestionsDataSource *dataSourceObject;
 @property (strong, nonatomic) IBOutlet SuggestionsDelegate *delegateObject;
 
 @end
@@ -31,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.dataSourceObject setController:self];
     [self ensure];
 }
 

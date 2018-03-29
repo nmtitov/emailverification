@@ -11,10 +11,12 @@
 #import "Error.h"
 #import "NSString+TrimmedString__NT.h"
 #import "NSString+isEmpty__NT.h"
+#import "NSString+isMatching__NT.h"
 #import "SuggestionsCell.h"
 
 @interface SuggestionsDataSource ()
 
+@property (weak, nonatomic) UITableViewController *controller;
 @property (strong, nonatomic) NSMutableArray *suggested;
 
 @property (strong, nonatomic) NSArray *all;
@@ -25,6 +27,8 @@
 @implementation SuggestionsDataSource
 
 - (void)ensure {
+    NSParameterAssert(self.controller);
+    NSParameterAssert(self.suggested);
     NSParameterAssert(self.all);
     NSParameterAssert(self.top);
 }
@@ -34,6 +38,8 @@
     if (!self) {
         return nil;
     }
+    
+    _suggested = [[NSMutableArray alloc] init];
     
     // Get API key
     NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
@@ -58,25 +64,43 @@
     return self;
 }
 
+- (void)setController:(UITableViewController *)controller {
+    _controller = controller;
+}
+
 - (void)setInput:(NSString *)input {
     _input = [input copy];
     [self.suggested removeAllObjects];
-    if (input.isEmpty__NT) {
-        [self.suggested addObjectsFromArray:self.top];
+    
+    NSRange range = [input rangeOfString:@"@"];
+    if (range.location == NSNotFound) {
+        NSLog(@"@ sign was not found, keep suggestions empty");
     } else {
-        NSArray *matching = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"content BEGINSWITH[cd] %@", input]];
-        [self.suggested addObjectsFromArray:matching];
+        NSUInteger location = range.location + 1;
+        NSLog(@"position %lu", (unsigned long)location);
+        
+        NSString *substring = [input substringFromIndex:location];
+        if (substring.isEmpty__NT) {
+            [self.suggested addObjectsFromArray:self.top];
+        } else {
+            for (NSString *domain in self.all) {
+                if ([domain hasPrefix:substring]) {
+                    [self.suggested addObject:domain];
+                }
+            }
+        }
     }
+    [self.controller.tableView reloadData];
 }
-
-#pragma mark - UITableViewDataSource
 
 - (NSString *)itemAt:(NSInteger)index {
     return self.suggested[index];
 }
 
+#pragma mark - UITableViewDataSource
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    SuggestionsCell *cell = (SuggestionsCell *)[tableView dequeueReusableCellWithIdentifier:SuggestionsCell.stringIdentifier forIndexPath:indexPath];
+    SuggestionsCell *cell = (SuggestionsCell *)[tableView dequeueReusableCellWithIdentifier:@"SuggestionsCell" forIndexPath:indexPath];
     cell.title = [self itemAt:indexPath.row];
     return cell;
 }

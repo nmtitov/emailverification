@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NTStringIdentifier.h"
 
-@interface SuggestionsCell : UITableViewCell <NTStringIdentifier>
+@interface SuggestionsCell : UITableViewCell
 
 @property (copy, nonatomic) NSString *title;
 
