@@ -178,13 +178,19 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="oFx-e4-YPI" id="IPT-Sb-MD3"/>
-                            <outlet property="delegate" destination="oFx-e4-YPI" id="GGQ-Ve-YOX"/>
+                            <outlet property="dataSource" destination="C3G-ee-pX8" id="kLF-Bp-51K"/>
+                            <outlet property="delegate" destination="1dq-js-t1u" id="Tpq-Dz-Qe8"/>
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="dataSourceObject" destination="C3G-ee-pX8" id="Fqg-Lo-kxG"/>
+                        <outlet property="delegateObject" destination="1dq-js-t1u" id="zuQ-II-Yq0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg3-BV-D7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="C3G-ee-pX8" customClass="SuggestionsDataSource"/>
+                <customObject id="1dq-js-t1u" customClass="SuggestionsDelegate"/>
             </objects>
             <point key="canvasLocation" x="1189" y="133"/>
         </scene>
