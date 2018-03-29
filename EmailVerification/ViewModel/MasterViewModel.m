@@ -89,7 +89,7 @@
         return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
     }];
     RACSignal *deliverableStatus = [self.deliverable map:^NSString *(NSNumber *value) {
-        return value.boolValue ? NSLocalizedString(@"Email looks great!", @"") : NSLocalizedString(@"Undeliverable", @"");
+        return value.boolValue ? NSLocalizedString(@"Success! Email seems to be deliverable!", @"") : NSLocalizedString(@"Undeliverable", @"");
     }];
     _status = [RACSignal merge:@[emptyStatus, deliverableStatus, formatStatus]];
     
