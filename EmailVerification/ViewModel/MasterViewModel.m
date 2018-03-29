@@ -9,6 +9,7 @@
 #import "MasterViewModel.h"
 #import "EmailValidator.h"
 #import "NSString+isEmpty__NT.h"
+#import "NSString+hasContent__NT.h"
 #import <ReactiveObjC/RACEXTScope.h>
 
 @interface MasterViewModel ()
@@ -23,19 +24,29 @@
 @implementation MasterViewModel
 
 - (void)ensure {
+    NSParameterAssert(self.http);
+
     NSParameterAssert(self.validator);
     NSParameterAssert(self.isEmpty);
     NSParameterAssert(self.isValidFormat);
     
     NSParameterAssert(self.isValid);
     NSParameterAssert(self.status);
+    NSParameterAssert(self.verifications);
 }
 
 - (instancetype)init {
+    return [self initWithHttp:nil];
+}
+
+- (instancetype)initWithHttp:(Http *)http {
+    NSParameterAssert(http);
+    
     self = [super init];
     if (!self) {
         return nil;
     }
+    _http = http;
     _validator = [[EmailValidator alloc] init];
     
     _isEmpty = [RACObserve(self, input) map:^id (NSString *value) {
@@ -62,6 +73,18 @@
         } else {
             return NSLocalizedString(@"Email looks good", @"");
         }
+    }];
+    
+    _verifications = [[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
+        @strongify(self);
+        return [self.validator evaluate:value];
+    }] throttle:0.3] filter:^BOOL(NSString *value) {
+        return value.hasContent__NT;
+    }] map:^RACSignal *(id value) {
+        @strongify(self);
+        return [self.http verifyEmail:value];
+    }] switchToLatest] map:^id _Nullable(id  _Nullable value) {
+        return [[ValidateResponse alloc] initWithAttributes:value];
     }];
     
     [self ensure];

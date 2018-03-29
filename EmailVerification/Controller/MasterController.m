@@ -12,6 +12,7 @@
 #import "NSString+TrimmedString__NT.h"
 #import "UIColor+EmailVerification.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACEXTScope.h>
 
 @interface MasterController ()
 
@@ -31,12 +32,10 @@
     
     // Dependencies
     NSParameterAssert(self.viewModel);
-    NSParameterAssert(self.http);
 }
 
-- (void)setViewModel:(MasterViewModel *)viewModel http:(Http *)http {
+- (void)setViewModel:(MasterViewModel *)viewModel {
     _viewModel = viewModel;
-    _http = http;
 }
 
 - (void)viewDidLoad {
@@ -56,6 +55,11 @@
         return value.trimmedString__NT;
     }];
     RAC(self, viewModel.input) = input;
+
+
+    [self.viewModel.verifications subscribeNext:^(ValidateResponse *value) {
+        NSLog(@"%@", value.result);
+    }];
 }
 
 - (void)subscribe {

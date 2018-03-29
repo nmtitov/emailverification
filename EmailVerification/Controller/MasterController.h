@@ -15,9 +15,8 @@
 @interface MasterController : UIViewController <Ensurable, NTStringIdentifier>
 
 @property (readonly, nonatomic) MasterViewModel *viewModel;
-@property (readonly, nonatomic) Http *http;
 
 // Dependencies
-- (void)setViewModel:(MasterViewModel *)viewModel http:(Http *)http;
+- (void)setViewModel:(MasterViewModel *)viewModel;
 
 @end
