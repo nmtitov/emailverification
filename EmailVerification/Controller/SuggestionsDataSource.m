@@ -84,7 +84,7 @@
             [self.suggested addObjectsFromArray:self.top];
         } else {
             for (NSString *domain in self.all) {
-                if ([domain hasPrefix:substring]) {
+                if ([domain hasPrefix:substring] && ![domain isEqualToString:substring]) {
                     [self.suggested addObject:domain];
                 }
             }
