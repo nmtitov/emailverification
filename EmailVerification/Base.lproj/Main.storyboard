@@ -163,28 +163,62 @@
         <scene sceneID="B8J-rp-eSI">
             <objects>
                 <tableViewController storyboardIdentifier="SuggestionsController" id="oFx-e4-YPI" customClass="SuggestionsController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hv0-n3-t47">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hv0-n3-t47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cJc-4Q-ea5">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SuggestionsCell" id="cJc-4Q-ea5" customClass="SuggestionsCell">
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJc-4Q-ea5" id="G5t-bt-BYy">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpV-3a-Yc4" userLabel="Wrapper">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-bg-d6O">
+                                                    <rect key="frame" x="16" y="12" width="288" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="fGQ-bg-d6O" firstAttribute="leading" secondItem="lpV-3a-Yc4" secondAttribute="leading" constant="16" id="1J7-B6-ubD"/>
+                                                <constraint firstAttribute="trailing" secondItem="fGQ-bg-d6O" secondAttribute="trailing" constant="16" id="AkD-D4-x2v"/>
+                                                <constraint firstItem="fGQ-bg-d6O" firstAttribute="centerY" secondItem="lpV-3a-Yc4" secondAttribute="centerY" id="N28-DW-Sue"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lpV-3a-Yc4" secondAttribute="bottom" id="0el-g8-Exc"/>
+                                        <constraint firstItem="lpV-3a-Yc4" firstAttribute="leading" secondItem="G5t-bt-BYy" secondAttribute="leading" id="1R6-1n-iWG"/>
+                                        <constraint firstAttribute="trailing" secondItem="lpV-3a-Yc4" secondAttribute="trailing" id="bku-Xc-re7"/>
+                                        <constraint firstItem="lpV-3a-Yc4" firstAttribute="top" secondItem="G5t-bt-BYy" secondAttribute="top" id="hcq-en-exN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="fGQ-bg-d6O" id="OGW-tk-y1U"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="oFx-e4-YPI" id="IPT-Sb-MD3"/>
-                            <outlet property="delegate" destination="oFx-e4-YPI" id="GGQ-Ve-YOX"/>
+                            <outlet property="dataSource" destination="C3G-ee-pX8" id="kLF-Bp-51K"/>
+                            <outlet property="delegate" destination="1dq-js-t1u" id="Tpq-Dz-Qe8"/>
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="dataSourceObject" destination="C3G-ee-pX8" id="Fqg-Lo-kxG"/>
+                        <outlet property="delegateObject" destination="1dq-js-t1u" id="zuQ-II-Yq0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg3-BV-D7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="C3G-ee-pX8" customClass="SuggestionsDataSource"/>
+                <customObject id="1dq-js-t1u" customClass="SuggestionsDelegate"/>
             </objects>
             <point key="canvasLocation" x="1189" y="133"/>
         </scene>

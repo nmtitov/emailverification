@@ -8,18 +8,23 @@
 
 #import "SuggestionsController.h"
 
-@interface SuggestionsController ()
-
-@end
-
 @implementation SuggestionsController
 
 - (void)ensure {
-    
+    // IB
+    NSParameterAssert(self.dataSourceObject);
+    NSParameterAssert(self.delegateObject);
+    NSParameterAssert(self.tableView.dataSource);
+    NSParameterAssert(self.tableView.delegate);
+    // Child
+    [self.dataSourceObject ensure];
+    [self.delegateObject ensure];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.dataSourceObject setController:self];
+    [self.delegateObject setDataSource:self.dataSourceObject];
     [self ensure];
 }
 

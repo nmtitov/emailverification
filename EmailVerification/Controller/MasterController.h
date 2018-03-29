@@ -11,8 +11,9 @@
 #import "MasterViewModel.h"
 #import "Http.h"
 #import "NSObject+NTStringIdentifier.h"
+#import "SuggestionsSelectionDelegate.h"
 
-@interface MasterController : UIViewController <Ensurable, NTStringIdentifier>
+@interface MasterController : UIViewController <Ensurable, NTStringIdentifier, SuggestionsSelectionDelegate>
 
 @property (readonly, nonatomic) MasterViewModel *viewModel;
 

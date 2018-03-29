@@ -30,6 +30,10 @@
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
 		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
+		6FF779EE206CE3C000C8BB2A /* SuggestionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */; };
+		6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */; };
+		6FF779F3206CE50800C8BB2A /* free.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF779F2206CE50800C8BB2A /* free.txt */; };
+		6FF779F6206CE73600C8BB2A /* SuggestionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */; };
 		88118B31B065F5A539714D9A /* libPods-EmailVerificationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */; };
 		BC4907A89F2123AAFB630BE4 /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,7 @@
 		45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.debug.xcconfig"; sourceTree = "<group>"; };
+		6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsSelectionDelegate.h; sourceTree = "<group>"; };
 		6F098820206BF57300E6146C /* Ensurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ensurable.h; sourceTree = "<group>"; };
 		6F098821206BF75700E6146C /* MasterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewModel.h; sourceTree = "<group>"; };
 		6F098822206BF75700E6146C /* MasterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewModel.m; sourceTree = "<group>"; };
@@ -101,6 +106,13 @@
 		6FB4DE9F206BCE2300D62416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FB4DEB2206BD17A00D62416 /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
 		6FB4DEB3206BD17A00D62416 /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
+		6FF779EC206CE3C000C8BB2A /* SuggestionsDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsDataSource.h; sourceTree = "<group>"; };
+		6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDataSource.m; sourceTree = "<group>"; };
+		6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsDelegate.h; sourceTree = "<group>"; };
+		6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDelegate.m; sourceTree = "<group>"; };
+		6FF779F2206CE50800C8BB2A /* free.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = free.txt; sourceTree = "<group>"; };
+		6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsCell.h; sourceTree = "<group>"; };
+		6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsCell.m; sourceTree = "<group>"; };
 		72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.release.xcconfig"; sourceTree = "<group>"; };
 		D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +214,7 @@
 		6F098834206C0BB500E6146C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6FF779F2206CE50800C8BB2A /* free.txt */,
 			);
 			name = Resources;
 			path = EmailVerification/Resources;
@@ -316,6 +329,13 @@
 				6FB4DEB2206BD17A00D62416 /* MasterController.m */,
 				6F098851206C29B700E6146C /* SuggestionsController.h */,
 				6F098852206C29B700E6146C /* SuggestionsController.m */,
+				6FF779EC206CE3C000C8BB2A /* SuggestionsDataSource.h */,
+				6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */,
+				6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */,
+				6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */,
+				6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */,
+				6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */,
+				6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */,
 			);
 			name = Controller;
 			path = EmailVerification/Controller;
@@ -462,6 +482,7 @@
 				6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */,
 				6F098839206C0E0700E6146C /* kickbox.txt in Resources */,
 				6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */,
+				6FF779F3206CE50800C8BB2A /* free.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,11 +567,14 @@
 				6F098840206C151B00E6146C /* Error.m in Sources */,
 				6F098823206BF75700E6146C /* MasterViewModel.m in Sources */,
 				6F09883D206C142A00E6146C /* Http.m in Sources */,
+				6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */,
 				6F098827206BFCD000E6146C /* EmailValidator.m in Sources */,
 				6F098856206C335600E6146C /* ValidateResponse.m in Sources */,
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6F09884D206C175E00E6146C /* NSString+hasContent__NT.m in Sources */,
 				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
+				6FF779F6206CE73600C8BB2A /* SuggestionsCell.m in Sources */,
+				6FF779EE206CE3C000C8BB2A /* SuggestionsDataSource.m in Sources */,
 				6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */,
 				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 				6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */,
