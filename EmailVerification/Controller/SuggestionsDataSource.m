@@ -93,11 +93,22 @@
     [self.controller.tableView reloadData];
 }
 
+- (NSInteger)numberOfItems {
+    return self.suggested.count;
+}
+
 - (NSString *)itemAt:(NSInteger)index {
     return self.suggested[index];
 }
 
 #pragma mark - UITableViewDataSource
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return [self numberOfItems] == 0 ? nil : NSLocalizedString(@"Suggestions", @"");
+    }
+    return nil;
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     SuggestionsCell *cell = (SuggestionsCell *)[tableView dequeueReusableCellWithIdentifier:@"SuggestionsCell" forIndexPath:indexPath];
@@ -106,7 +117,7 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.suggested.count;
+    return [self numberOfItems];
 }
 
 @end
