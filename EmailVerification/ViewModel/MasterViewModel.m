@@ -56,12 +56,10 @@
         return @([self.validator evaluate:value]);
     }];
     
-    _deliverable = [[[[[[[input filter:^BOOL(id  _Nullable value) {
+    _deliverable = [[[[[[input filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
-    }] throttle:0.3] filter:^BOOL(NSString *value) {
-        return value.hasContent__NT;
-    }] map:^RACSignal *(id value) {
+    }] throttle:0.3] map:^RACSignal *(id value) {
         @strongify(self);
         return [[self.http verifyEmail:value] tryMap:^id(id value, NSError **errorPtr) {
             return [[ValidateResponse alloc] initWithAttributes:value];
