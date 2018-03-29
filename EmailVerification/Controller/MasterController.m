@@ -56,7 +56,12 @@
         return value.trimmedString__NT;
     }];
     RAC(self, viewModel.input) = input;
-    RAC(self, tableController.dataSourceObject.input) = input;
+    @weakify(self);
+    [input subscribeNext:^(NSString *value) {
+        @strongify(self);
+        self.tableController.dataSourceObject.input = value;
+        [self.tableController.tableView reloadData];
+    }];
 }
 
 - (void)subscribe {

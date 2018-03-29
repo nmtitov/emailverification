@@ -16,7 +16,6 @@
 
 @interface SuggestionsDataSource ()
 
-@property (weak, nonatomic) UITableViewController *controller;
 @property (strong, nonatomic) NSMutableArray *suggested;
 
 @property (strong, nonatomic) NSArray *all;
@@ -27,7 +26,6 @@
 @implementation SuggestionsDataSource
 
 - (void)ensure {
-    NSParameterAssert(self.controller);
     NSParameterAssert(self.suggested);
     NSParameterAssert(self.all);
     NSParameterAssert(self.top);
@@ -64,10 +62,6 @@
     return self;
 }
 
-- (void)setController:(UITableViewController *)controller {
-    _controller = controller;
-}
-
 - (void)setInput:(NSString *)input {
     _input = [input copy];
     [self.suggested removeAllObjects];
@@ -85,7 +79,6 @@
             }
         }
     }
-    [self.controller.tableView reloadData];
 }
 
 - (NSInteger)numberOfItems {

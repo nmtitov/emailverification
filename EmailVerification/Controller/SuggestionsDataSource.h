@@ -13,8 +13,6 @@
 
 @property (copy, nonatomic) NSString *input;
 
-- (void)setController:(UITableViewController *)controller;
-
 - (NSString *)itemAt:(NSInteger)index;
 
 @end

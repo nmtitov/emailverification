@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.dataSourceObject setController:self];
     [self.delegateObject setDataSource:self.dataSourceObject];
     [self ensure];
 }
