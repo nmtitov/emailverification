@@ -18,7 +18,7 @@
 
 @property (readonly, nonatomic) RACSignal *isValid;
 @property (readonly, nonatomic) RACSignal *status;
-@property (readonly, nonatomic) RACSignal *verifications;
+@property (readonly, nonatomic) RACSignal *deliverable;
 
 - (instancetype)initWithHttp:(Http *)http NS_DESIGNATED_INITIALIZER;
 

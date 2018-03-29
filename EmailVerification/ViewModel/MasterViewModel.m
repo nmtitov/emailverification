@@ -32,7 +32,7 @@
     
     NSParameterAssert(self.isValid);
     NSParameterAssert(self.status);
-    NSParameterAssert(self.verifications);
+    NSParameterAssert(self.deliverable);
 }
 
 - (instancetype)init {
@@ -75,7 +75,7 @@
         }
     }];
     
-    _verifications = [[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
+    _deliverable = [[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
     }] throttle:0.3] filter:^BOOL(NSString *value) {
@@ -85,6 +85,8 @@
         return [self.http verifyEmail:value];
     }] switchToLatest] map:^id _Nullable(id  _Nullable value) {
         return [[ValidateResponse alloc] initWithAttributes:value];
+    }] map:^id _Nullable(ValidateResponse *value) {
+        return @([value.result isEqualToString:@"deliverable"]);
     }];
     
     [self ensure];

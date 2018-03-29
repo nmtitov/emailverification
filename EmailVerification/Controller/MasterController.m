@@ -57,8 +57,8 @@
     RAC(self, viewModel.input) = input;
 
 
-    [self.viewModel.verifications subscribeNext:^(ValidateResponse *value) {
-        NSLog(@"%@", value.result);
+    [self.viewModel.deliverable subscribeNext:^(NSNumber *value) {
+        NSLog(@"%d", value.boolValue);
     }];
 }
 
