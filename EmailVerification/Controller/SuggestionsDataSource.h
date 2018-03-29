@@ -11,6 +11,6 @@
 
 @interface SuggestionsDataSource : NSObject <UITableViewDataSource, Ensurable>
 
-- (void)setInput:(NSString *)input;
+@property (copy, nonatomic) NSString *input;
 
 @end

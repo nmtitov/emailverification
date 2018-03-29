@@ -59,6 +59,7 @@
 }
 
 - (void)setInput:(NSString *)input {
+    _input = [input copy];
     [self.suggested removeAllObjects];
     if (input.isEmpty__NT) {
         [self.suggested addObjectsFromArray:self.top];
