@@ -17,8 +17,8 @@
 @property (copy, nonatomic) NSString *input;
 
 @property (readonly, nonatomic) RACSignal *isValid;
-@property (readonly, nonatomic) RACSignal *status;
 @property (readonly, nonatomic) RACSignal *deliverable;
+@property (readonly, nonatomic) RACSignal *status;
 
 - (instancetype)initWithHttp:(Http *)http NS_DESIGNATED_INITIALIZER;
 

@@ -31,8 +31,8 @@
     NSParameterAssert(self.isValidFormat);
     
     NSParameterAssert(self.isValid);
-    NSParameterAssert(self.status);
     NSParameterAssert(self.deliverable);
+    NSParameterAssert(self.status);
 }
 
 - (instancetype)init {
