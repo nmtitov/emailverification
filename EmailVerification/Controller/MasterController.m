@@ -50,9 +50,10 @@
 }
 
 - (void)bind {
-    RAC(self, viewModel.input) = [self.inputTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+    RACSignal *input = [self.inputTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
         return value.trimmedString__NT;
     }];
+    RAC(self, viewModel.input) = input;
 }
 
 - (void)subscribe {
