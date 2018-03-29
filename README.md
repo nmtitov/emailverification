@@ -19,6 +19,7 @@
 11. Show string status of validation.
 12. Add deliverable verification using kickbox.io API. Update status messages and colors behavior based on deliverable status. Ignore deliverable errors.
 13. Add suggestions.
+14. Refactor code, delete repeated lines, simplify methods.
 
 © 2018 Nikita Titov
 
