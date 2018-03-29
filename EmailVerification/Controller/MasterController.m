@@ -59,8 +59,7 @@
     @weakify(self);
     [input subscribeNext:^(NSString *value) {
         @strongify(self);
-        self.tableController.dataSourceObject.input = value;
-        [self.tableController.tableView reloadData];
+        [self.tableController showSuggestionsForInput:value];
     }];
 }
 

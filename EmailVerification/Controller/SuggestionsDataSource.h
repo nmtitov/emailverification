@@ -11,8 +11,7 @@
 
 @interface SuggestionsDataSource : NSObject <UITableViewDataSource, Ensurable>
 
-@property (copy, nonatomic) NSString *input;
-
+- (void)fetchSuggestionsForInput:(NSString *)input;
 - (NSString *)itemAt:(NSInteger)index;
 
 @end

@@ -17,4 +17,6 @@
 @property (strong, nonatomic) IBOutlet SuggestionsDataSource *dataSourceObject;
 @property (strong, nonatomic) IBOutlet SuggestionsDelegate *delegateObject;
 
+- (void)showSuggestionsForInput:(NSString *)input;
+
 @end
