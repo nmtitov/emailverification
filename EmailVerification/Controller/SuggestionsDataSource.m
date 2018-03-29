@@ -74,8 +74,7 @@
     
     NSRange range = [input rangeOfString:@"@"];
     if (range.location != NSNotFound) {
-        NSUInteger location = range.location + 1;
-        NSString *substring = [input substringFromIndex:location];
+        NSString *substring = [input substringFromIndex:range.location + 1];
         if (substring.isEmpty__NT) {
             [self.suggested addObjectsFromArray:self.top];
         } else {
