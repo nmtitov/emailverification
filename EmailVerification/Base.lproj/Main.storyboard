@@ -145,10 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Email" id="dNb-Vk-AjW">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="hZZ-wU-guW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="zfj-xW-3Q8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Email" id="dNb-Vk-AjW"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="inputTextField" destination="4rR-KA-63D" id="2CB-Iw-ssM"/>
