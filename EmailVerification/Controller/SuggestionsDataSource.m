@@ -38,9 +38,7 @@
     }
     
     _suggested = [[NSMutableArray alloc] init];
-    
     _all = [self loadDomains];
-    
     _top = @[
         @"gmail.com",
         @"yahoo.com",
