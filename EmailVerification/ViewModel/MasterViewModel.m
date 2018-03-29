@@ -30,8 +30,8 @@
     NSParameterAssert(self.isEmpty);
     NSParameterAssert(self.isValidFormat);
     
-    NSParameterAssert(self.isValid);
     NSParameterAssert(self.deliverable);
+    NSParameterAssert(self.isValid);
     NSParameterAssert(self.status);
 }
 
@@ -59,12 +59,6 @@
         return @([self.validator evaluate:value]);
     }];
     
-    _isValid = [[RACSignal combineLatest:@[self.isEmpty.not, self.isValidFormat]] map:^(RACTuple *tuple) {
-        return @([tuple.rac_sequence all:^(NSNumber *value) {
-            return value.boolValue;
-        }]);
-    }];
-    
     _deliverable = [[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
@@ -78,6 +72,9 @@
     }] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
     }];
+    
+    // Is Valid?
+    _isValid = [RACSignal merge:@[self.deliverable, self.isValidFormat]];
     
     // Status
     RACSignal *emptyStatus = [[self.isEmpty filter:^BOOL(NSNumber *value) {
