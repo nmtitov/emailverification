@@ -55,11 +55,6 @@
         return value.trimmedString__NT;
     }];
     RAC(self, viewModel.input) = input;
-
-
-    [self.viewModel.deliverable subscribeNext:^(NSNumber *value) {
-        NSLog(@"%d", value.boolValue);
-    }];
 }
 
 - (void)subscribe {

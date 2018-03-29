@@ -65,16 +65,6 @@
         }]);
     }];
     
-    _status = [RACSignal combineLatest:@[self.isEmpty, self.isValidFormat] reduce:^NSString *(NSNumber *isEmpty, NSNumber *isValidFormat) {
-        if (isEmpty.boolValue) {
-            return NSLocalizedString(@"Email is empty", @"");
-        } else if (!isValidFormat.boolValue) {
-            return NSLocalizedString(@"Email format is invalid", @"");
-        } else {
-            return NSLocalizedString(@"Email looks good", @"");
-        }
-    }];
-    
     _deliverable = [[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
@@ -88,6 +78,20 @@
     }] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
     }];
+    
+    // Status
+    RACSignal *emptyStatus = [[self.isEmpty filter:^BOOL(NSNumber *value) {
+        return value.boolValue;
+    }] map:^NSString *(id _) {
+        return NSLocalizedString(@"Email is empty", @"");
+    }];
+    RACSignal *formatStatus = [self.isValidFormat map:^NSString *(NSNumber *value) {
+        return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
+    }];
+    RACSignal *deliverableStatus = [self.deliverable map:^NSString *(NSNumber *value) {
+        return value.boolValue ? NSLocalizedString(@"Email looks great!", @"") : NSLocalizedString(@"Undeliverable", @"");
+    }];
+    _status = [RACSignal merge:@[emptyStatus, deliverableStatus, formatStatus]];
     
     [self ensure];
     return self;
