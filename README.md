@@ -1,5 +1,11 @@
 # Email Verification — iOS Coding Challenge (Objective-C)
 
+## Build instructions
+
+1. Make sure `EmailVerification/ApiKeys/kickbox.txt` exists and contains a valid kickbox.io API key.
+2. Open `EmailVerification.xcworkspace`.
+3. Press `Cmd+R`.
+
 ## Task
 
 > Build an incredible experience for users entering a single email address into a text field, while at the same time impressing us with how simple and clean your code is.
