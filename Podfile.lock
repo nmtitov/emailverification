@@ -16,23 +16,18 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
-  - Mantle (2.1.0):
-    - Mantle/extobjc (= 2.1.0)
-  - Mantle/extobjc (2.1.0)
   - ReactiveObjC (3.1.0)
   - UIColor-HexString (1.1.0)
 
 DEPENDENCIES:
   - AFNetworkActivityLogger (from `https://github.com/AFNetworking/AFNetworkActivityLogger.git`, branch `3_0_0`)
   - AFNetworking (~> 3.2.0)
-  - Mantle (~> 2.1.0)
   - ReactiveObjC (~> 3.1.0)
   - UIColor-HexString (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - Mantle
     - ReactiveObjC
     - UIColor-HexString
 
@@ -49,10 +44,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   UIColor-HexString: f8a5612bd6772fed8db58ee594b42a0b2831750e
 
-PODFILE CHECKSUM: 3e161ec3fc9c82aeb9bc1a6a4f080c133230a178
+PODFILE CHECKSUM: a21bddffe64819bd67c0a9d89b5124f256899db8
 
 COCOAPODS: 1.5.0.beta.1

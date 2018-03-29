@@ -9,7 +9,6 @@ target 'EmailVerification' do
   pod 'ReactiveObjC', '~> 3.1.0'
   pod 'AFNetworking', '~> 3.2.0'
   pod ‘AFNetworkActivityLogger’, :git => ‘https://github.com/AFNetworking/AFNetworkActivityLogger.git', :branch => ‘3_0_0’  
-  pod 'Mantle', '~> 2.1.0'
   pod 'UIColor-HexString', '~> 1.1.0'
 
   target 'EmailVerificationTests' do
