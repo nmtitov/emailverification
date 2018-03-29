@@ -21,12 +21,6 @@
     [self configureHttp];
     [self configureRootController];
     
-    [[[self.http verifyEmail:@"nmtitov@yandex.ru"] map:^id _Nullable(id  _Nullable value) {
-        return [[ValidateResponse alloc] initWithAttributes:value];
-    }] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@", x);
-    }];
-    
     return YES;
 }
 
@@ -41,7 +35,7 @@
     MasterController *controller = (MasterController *)navigation.topViewController;    
     NSParameterAssert(controller);
     
-    MasterViewModel *viewModel = [[MasterViewModel alloc] init];
+    MasterViewModel *viewModel = [[MasterViewModel alloc] initWithHttp:self.http];
     [controller setViewModel:viewModel];
 }
 

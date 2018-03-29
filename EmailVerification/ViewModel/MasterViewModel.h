@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "Ensurable.h"
+#import "Http.h"
 
 @interface MasterViewModel : NSObject <Ensurable>
 
+@property (readonly, nonatomic) Http *http;
 @property (copy, nonatomic) NSString *input;
 
+@property (readonly, nonatomic) RACSignal *deliverable;
 @property (readonly, nonatomic) RACSignal *isValid;
 @property (readonly, nonatomic) RACSignal *status;
+
+- (instancetype)initWithHttp:(Http *)http NS_DESIGNATED_INITIALIZER;
 
 @end
