@@ -90,7 +90,7 @@
     RACSignal *deliverableStatus = [[self.deliverable filter:^BOOL(id value) {
         return value != nil;
     }] map:^NSString *(NSNumber *value) {
-        return value.boolValue ? NSLocalizedString(@"Success! Email seems to be deliverable!", @"") : NSLocalizedString(@"Undeliverable", @"");
+        return value.boolValue ? NSLocalizedString(@"Looks great!", @"") : NSLocalizedString(@"Undeliverable", @"");
     }];
     _status = [RACSignal merge:@[deliverableStatus, emptyStatus, formatStatus]];
     
