@@ -331,11 +331,11 @@
 				6F098852206C29B700E6146C /* SuggestionsController.m */,
 				6FF779EC206CE3C000C8BB2A /* SuggestionsDataSource.h */,
 				6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */,
+				6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */,
 				6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */,
 				6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */,
 				6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */,
 				6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */,
-				6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */,
 			);
 			name = Controller;
 			path = EmailVerification/Controller;
