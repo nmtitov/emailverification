@@ -67,7 +67,7 @@
     }] map:^RACSignal *(id value) {
         @strongify(self);
         return [self.http verifyEmail:value];
-    }] switchToLatest] map:^id _Nullable(id  _Nullable value) {
+    }] switchToLatest] tryMap:^id(id value, NSError **errorPtr) {
         return [[ValidateResponse alloc] initWithAttributes:value];
     }] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
