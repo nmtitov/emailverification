@@ -31,10 +31,12 @@
     
     // Dependencies
     NSParameterAssert(self.viewModel);
+    NSParameterAssert(self.http);
 }
 
-- (void)setViewModel:(MasterViewModel *)viewModel {
+- (void)setViewModel:(MasterViewModel *)viewModel http:(Http *)http {
     _viewModel = viewModel;
+    _http = http;
 }
 
 - (void)viewDidLoad {

@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Ensurable.h"
 #import "MasterViewModel.h"
+#import "Http.h"
 #import "NSObject+NTStringIdentifier.h"
 
 @interface MasterController : UIViewController <Ensurable, NTStringIdentifier>
 
 @property (readonly, nonatomic) MasterViewModel *viewModel;
+@property (readonly, nonatomic) Http *http;
 
 // Dependencies
-- (void)setViewModel:(MasterViewModel *)viewModel;
+- (void)setViewModel:(MasterViewModel *)viewModel http:(Http *)http;
 
 @end

@@ -42,7 +42,7 @@
     NSParameterAssert(controller);
     
     MasterViewModel *viewModel = [[MasterViewModel alloc] init];
-    [controller setViewModel:viewModel];
+    [controller setViewModel:viewModel http:self.http];
 }
 
 @end
