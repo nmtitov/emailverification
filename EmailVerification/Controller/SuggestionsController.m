@@ -20,10 +20,13 @@
 @implementation SuggestionsController
 
 - (void)ensure {
+    // IB
     NSParameterAssert(self.dataSourceObject);
     NSParameterAssert(self.delegateObject);
     NSParameterAssert(self.tableView.dataSource);
     NSParameterAssert(self.tableView.delegate);
+    // Child
+    [self.dataSourceObject ensure];
 }
 
 - (void)viewDidLoad {

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ensurable.h"
 
-@interface SuggestionsDataSource : NSObject <UITableViewDataSource>
+@interface SuggestionsDataSource : NSObject <UITableViewDataSource, Ensurable>
 
 @end
