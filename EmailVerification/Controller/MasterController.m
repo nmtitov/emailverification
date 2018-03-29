@@ -37,7 +37,6 @@
     self.tableController.delegateObject.delegate = self;
     [self ensure];
     [self bind];
-    [self subscribe];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,9 +54,6 @@
         @strongify(self);
         [self.tableController showSuggestionsForInput:value];
     }];
-}
-
-- (void)subscribe {
     RAC(self, statusLabel.text) = self.viewModel.status;
     RAC(self, statusLabel.textColor) = [self.viewModel.isValid map:^UIColor *(NSNumber *value) {
         return value.boolValue ? UIColor.email_verification__is_valid_text : UIColor.email_verification__is_not_valid_text;
