@@ -28,11 +28,7 @@
 
 - (void)setTitle:(NSString *)title {
     _title = [title copy];
-    [self didSetTitle:title];
-}
-
-- (void)didSetTitle:(NSString *)newValue {
-    self.titleLabel.text = newValue;
+    self.titleLabel.text = title;
 }
 
 @end
