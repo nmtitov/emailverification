@@ -19,9 +19,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *item = [self.dataSource itemAt:indexPath.row];
-    [self.delegate didSelectSuggestion:item];
-    [tableView reloadData];
+    [self.delegate didSelectSuggestion:[self.dataSource itemAt:indexPath.row]];
 }
 
 @end
