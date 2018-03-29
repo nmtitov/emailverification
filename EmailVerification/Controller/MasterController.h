@@ -15,9 +15,6 @@
 
 @interface MasterController : UIViewController <Ensurable, NTStringIdentifier, SuggestionsSelectionDelegate>
 
-@property (readonly, nonatomic) MasterViewModel *viewModel;
-
-// Dependencies
-- (void)setViewModel:(MasterViewModel *)viewModel;
+@property (strong, nonatomic) MasterViewModel *viewModel;
 
 @end

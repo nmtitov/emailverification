@@ -31,8 +31,7 @@
     NSParameterAssert(navigation);
     NSParameterAssert(controller);
     
-    MasterViewModel *viewModel = [[MasterViewModel alloc] initWithHttp:self.http];
-    [controller setViewModel:viewModel];
+    controller.viewModel = [[MasterViewModel alloc] initWithHttp:self.http];
 }
 
 @end
