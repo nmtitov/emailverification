@@ -30,7 +30,6 @@
     NSParameterAssert(self.isEmpty);
     NSParameterAssert(self.isValidFormat);
     
-    NSParameterAssert(self.errors);
     NSParameterAssert(self.deliverable);
     NSParameterAssert(self.isValid);
     NSParameterAssert(self.status);
@@ -49,8 +48,6 @@
     }
     _http = http;
     _validator = [[EmailValidator alloc] init];
-    
-    _errors = [RACSignal empty];
     
     _isEmpty = [RACObserve(self, input) map:^id (NSString *value) {
         return @(value.isEmpty__NT);
@@ -76,7 +73,7 @@
         }];
     }] switchToLatest] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
-    }] catchTo:self.errors];
+    }] catchTo:[RACSignal empty]];
     
     // Is Valid?
     _isValid = [RACSignal merge:@[self.deliverable, self.isValidFormat]];
