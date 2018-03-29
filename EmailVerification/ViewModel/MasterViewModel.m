@@ -16,9 +16,6 @@
 
 @property (readonly, nonatomic) EmailValidator *validator;
 
-@property (readonly, nonatomic) RACSignal *isEmpty;
-@property (readonly, nonatomic) RACSignal *isValidFormat;
-
 @end
 
 @implementation MasterViewModel
@@ -27,8 +24,6 @@
     NSParameterAssert(self.http);
 
     NSParameterAssert(self.validator);
-    NSParameterAssert(self.isEmpty);
-    NSParameterAssert(self.isValidFormat);
     
     NSParameterAssert(self.deliverable);
     NSParameterAssert(self.isValid);
@@ -51,12 +46,12 @@
 
     RACSignal *input = RACObserve(self, input);
 
-    _isEmpty = [input map:^id (NSString *value) {
+    RACSignal *isEmpty = [input map:^id (NSString *value) {
         return @(value.isEmpty__NT);
     }];
     
     @weakify(self);
-    _isValidFormat = [input map:^id (NSString *value) {
+    RACSignal *isValidFormat = [input map:^id (NSString *value) {
         @strongify(self);
         return @([self.validator evaluate:value]);
     }];
@@ -75,15 +70,15 @@
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
     
-    _isValid = [RACSignal merge:@[self.deliverable, self.isValidFormat]];
+    _isValid = [RACSignal merge:@[self.deliverable, isValidFormat]];
     
     // Status
-    RACSignal *emptyStatus = [[self.isEmpty filter:^BOOL(NSNumber *value) {
+    RACSignal *emptyStatus = [[isEmpty filter:^BOOL(NSNumber *value) {
         return value.boolValue;
     }] map:^NSString *(id _) {
         return NSLocalizedString(@"Email is empty", @"");
     }];
-    RACSignal *formatStatus = [self.isValidFormat map:^NSString *(NSNumber *value) {
+    RACSignal *formatStatus = [isValidFormat map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
     }];
     RACSignal *deliverableStatus = [self.deliverable map:^NSString *(NSNumber *value) {
