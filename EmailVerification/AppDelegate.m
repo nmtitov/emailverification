@@ -26,9 +26,9 @@
 
 - (void)configureRootController {
     UINavigationController *navigation = (UINavigationController *)self.window.rootViewController;
+    MasterController *controller = (MasterController *)navigation.topViewController;
+    
     NSParameterAssert(navigation);
-
-    MasterController *controller = (MasterController *)navigation.topViewController;    
     NSParameterAssert(controller);
     
     MasterViewModel *viewModel = [[MasterViewModel alloc] initWithHttp:self.http];
