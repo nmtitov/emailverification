@@ -56,13 +56,15 @@
         return @(value.isEmpty__NT);
     }];
 
+    RACSignal *input = RACObserve(self, input);
+    
     @weakify(self);
-    _isValidFormat = [RACObserve(self, input) map:^id (NSString *value) {
+    _isValidFormat = [input map:^id (NSString *value) {
         @strongify(self);
         return @([self.validator evaluate:value]);
     }];
     
-    _deliverable = [[[[[[[RACObserve(self, input) filter:^BOOL(id  _Nullable value) {
+    _deliverable = [[[[[[[input filter:^BOOL(id  _Nullable value) {
         @strongify(self);
         return [self.validator evaluate:value];
     }] throttle:0.3] filter:^BOOL(NSString *value) {
