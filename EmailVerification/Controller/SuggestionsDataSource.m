@@ -64,7 +64,7 @@
     if (input.isEmpty__NT) {
         [self.suggested addObjectsFromArray:self.top];
     } else {
-        NSArray *matching = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"BEGINSWITH[cd] %@", input]];
+        NSArray *matching = [self.all filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"content BEGINSWITH[cd] %@", input]];
         [self.suggested addObjectsFromArray:matching];
     }
 }
