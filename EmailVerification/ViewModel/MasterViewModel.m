@@ -25,7 +25,7 @@
 
     NSParameterAssert(self.validator);
     
-    NSParameterAssert(self.deliverable);
+    NSParameterAssert(self.isDeliverable);
     NSParameterAssert(self.isValid);
     NSParameterAssert(self.status);
 }
@@ -56,7 +56,7 @@
         return @([self.validator evaluate:value]);
     }];
     
-    _deliverable = [[[[[input map:^id(NSString *value) {
+    _isDeliverable = [[[[[input map:^id(NSString *value) {
         if ([self.validator evaluate:value]) {
             return value;
         }
@@ -76,9 +76,9 @@
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
     
-    _isValid = [RACSignal merge:@[self.deliverable, isValidFormat]];
+    _isValid = [RACSignal merge:@[self.isDeliverable, isValidFormat]];
     
-    _status = [self createStatusWithIsEmpty:isEmpty isValidFormat:isValidFormat isDeliverable:self.deliverable];
+    _status = [self createStatusWithIsEmpty:isEmpty isValidFormat:isValidFormat isDeliverable:self.isDeliverable];
     
     [self ensure];
     return self;

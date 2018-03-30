@@ -16,7 +16,7 @@
 @property (readonly, nonatomic) Http *http;
 @property (copy, nonatomic) NSString *input;
 
-@property (readonly, nonatomic) RACSignal *deliverable; // Stream of boolean values
+@property (readonly, nonatomic) RACSignal *isDeliverable; // Stream of boolean values
 @property (readonly, nonatomic) RACSignal *isValid; // Stream of boolean values
 @property (readonly, nonatomic) RACSignal *status; // Stream of strings
 
