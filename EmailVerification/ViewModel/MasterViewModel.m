@@ -45,18 +45,26 @@
     _validator = [[EmailValidator alloc] init];
 
     RACSignal *input = RACObserve(self, input);
-
     RACSignal *isEmpty = [input map:^id (NSString *value) {
         return @(value.isEmpty__NT);
     }];
-    
     @weakify(self);
     RACSignal *isValidFormat = [input map:^id (NSString *value) {
         @strongify(self);
         return @([self.validator evaluate:value]);
     }];
     
-    _isDeliverable = [[[[[input filter:^BOOL(NSString *value) {
+    _isDeliverable = [self createIsDeliverableWithInput:input];
+    _isValid = [RACSignal merge:@[self.isDeliverable, isValidFormat]];
+    _status = [self createStatusWithIsEmpty:isEmpty isValidFormat:isValidFormat isDeliverable:self.isDeliverable];
+    
+    [self ensure];
+    return self;
+}
+
+- (RACSignal *)createIsDeliverableWithInput:(RACSignal *)input {
+    @weakify(self);
+    return [[[[[input filter:^BOOL(NSString *value) {
         return [self.validator evaluate:value];
     }] map:^RACSignal *(NSString *value) {
         @strongify(self);
@@ -66,13 +74,6 @@
     }] switchToLatest] map:^id _Nullable(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
-    
-    _isValid = [RACSignal merge:@[self.isDeliverable, isValidFormat]];
-    
-    _status = [self createStatusWithIsEmpty:isEmpty isValidFormat:isValidFormat isDeliverable:self.isDeliverable];
-    
-    [self ensure];
-    return self;
 }
 
 - (RACSignal *)createStatusWithIsEmpty:(RACSignal *)isEmpty isValidFormat:(RACSignal *)isValidFormat isDeliverable:(RACSignal *)isDeliverable {
