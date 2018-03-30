@@ -22,11 +22,12 @@
 		6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09884B206C175E00E6146C /* NSString+TrimmedString__NT.m */; };
 		6F098853206C29B700E6146C /* SuggestionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098852206C29B700E6146C /* SuggestionsController.m */; };
 		6F098856206C335600E6146C /* ValidateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098855206C335600E6146C /* ValidateResponse.m */; };
-		6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7A206BCE2300D62416 /* AppDelegate.m */; };
-		6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE7F206BCE2300D62416 /* Main.storyboard */; };
-		6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE82206BCE2300D62416 /* Assets.xcassets */; };
-		6FB4DE86206BCE2300D62416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */; };
-		6FB4DE89206BCE2300D62416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE88206BCE2300D62416 /* main.m */; };
+		6F425303206E24D700FC6D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F425302206E24D700FC6D25 /* AppDelegate.m */; };
+		6F425305206E24E100FC6D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F425304206E24E100FC6D25 /* Assets.xcassets */; };
+		6F425308206E24E900FC6D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F425306206E24E900FC6D25 /* main.m */; };
+		6F425309206E24E900FC6D25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F425307206E24E900FC6D25 /* Info.plist */; };
+		6F42530E206E251700FC6D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530A206E251700FC6D25 /* LaunchScreen.storyboard */; };
+		6F42530F206E251700FC6D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530C206E251700FC6D25 /* Main.storyboard */; };
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
 		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
@@ -90,14 +91,14 @@
 		6F098852206C29B700E6146C /* SuggestionsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsController.m; sourceTree = "<group>"; };
 		6F098854206C335600E6146C /* ValidateResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidateResponse.h; sourceTree = "<group>"; };
 		6F098855206C335600E6146C /* ValidateResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidateResponse.m; sourceTree = "<group>"; };
+		6F425301206E24D700FC6D25 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EmailVerification/AppDelegate.h; sourceTree = "<group>"; };
+		6F425302206E24D700FC6D25 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EmailVerification/AppDelegate.m; sourceTree = "<group>"; };
+		6F425304206E24E100FC6D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EmailVerification/Assets.xcassets; sourceTree = "<group>"; };
+		6F425306206E24E900FC6D25 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EmailVerification/main.m; sourceTree = "<group>"; };
+		6F425307206E24E900FC6D25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EmailVerification/Info.plist; sourceTree = "<group>"; };
+		6F42530B206E251700FC6D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EmailVerification/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F42530D206E251700FC6D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EmailVerification/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FB4DE79206BCE2300D62416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6FB4DE7A206BCE2300D62416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6FB4DE80206BCE2300D62416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6FB4DE82206BCE2300D62416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6FB4DE85206BCE2300D62416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6FB4DE87206BCE2300D62416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB4DE88206BCE2300D62416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FB4DE8E206BCE2300D62416 /* EmailVerificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailVerificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailVerificationTests.m; sourceTree = "<group>"; };
 		6FB4DE94206BCE2300D62416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -281,8 +282,8 @@
 		6FB4DE78206BCE2200D62416 /* EmailVerification */ = {
 			isa = PBXGroup;
 			children = (
-				6FB4DE79206BCE2300D62416 /* AppDelegate.h */,
-				6FB4DE7A206BCE2300D62416 /* AppDelegate.m */,
+				6F425301206E24D700FC6D25 /* AppDelegate.h */,
+				6F425302206E24D700FC6D25 /* AppDelegate.m */,
 				6F09883A206C13B300E6146C /* Http */,
 				6FB4DEAD206BD03900D62416 /* Model */,
 				6FB4DEAC206BD03900D62416 /* ViewModel */,
@@ -291,15 +292,14 @@
 				6F09881E206BF52900E6146C /* Misc */,
 				6F098835206C0C5E00E6146C /* ApiKeys */,
 				6F098834206C0BB500E6146C /* Resources */,
-				6FB4DE7F206BCE2300D62416 /* Main.storyboard */,
-				6FB4DE82206BCE2300D62416 /* Assets.xcassets */,
-				6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */,
-				6FB4DE87206BCE2300D62416 /* Info.plist */,
-				6FB4DE88206BCE2300D62416 /* main.m */,
+				6F42530A206E251700FC6D25 /* LaunchScreen.storyboard */,
+				6F42530C206E251700FC6D25 /* Main.storyboard */,
+				6F425304206E24E100FC6D25 /* Assets.xcassets */,
+				6F425307206E24E900FC6D25 /* Info.plist */,
+				6F425306206E24E900FC6D25 /* main.m */,
 			);
 			name = EmailVerification;
-			path = /Users/nt/dev/mac/my/EmailVerification/EmailVerification;
-			sourceTree = "<absolute>";
+			sourceTree = "<group>";
 		};
 		6FB4DE91206BCE2300D62416 /* EmailVerificationTests */ = {
 			isa = PBXGroup;
@@ -308,9 +308,8 @@
 				6F098828206C000900E6146C /* EmailValidatorTests.m */,
 				6FB4DE94206BCE2300D62416 /* Info.plist */,
 			);
-			name = EmailVerificationTests;
-			path = /Users/nt/dev/mac/my/EmailVerification/EmailVerificationTests;
-			sourceTree = "<absolute>";
+			path = EmailVerificationTests;
+			sourceTree = "<group>";
 		};
 		6FB4DE9C206BCE2300D62416 /* EmailVerificationUITests */ = {
 			isa = PBXGroup;
@@ -318,9 +317,8 @@
 				6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */,
 				6FB4DE9F206BCE2300D62416 /* Info.plist */,
 			);
-			name = EmailVerificationUITests;
-			path = /Users/nt/dev/mac/my/EmailVerification/EmailVerificationUITests;
-			sourceTree = "<absolute>";
+			path = EmailVerificationUITests;
+			sourceTree = "<group>";
 		};
 		6FB4DEAB206BD03900D62416 /* Controller */ = {
 			isa = PBXGroup;
@@ -478,11 +476,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB4DE86206BCE2300D62416 /* LaunchScreen.storyboard in Resources */,
-				6FB4DE83206BCE2300D62416 /* Assets.xcassets in Resources */,
 				6F098839206C0E0700E6146C /* kickbox.txt in Resources */,
-				6FB4DE81206BCE2300D62416 /* Main.storyboard in Resources */,
+				6F425309206E24E900FC6D25 /* Info.plist in Resources */,
 				6FF779F3206CE50800C8BB2A /* free.txt in Resources */,
+				6F42530F206E251700FC6D25 /* Main.storyboard in Resources */,
+				6F42530E206E251700FC6D25 /* LaunchScreen.storyboard in Resources */,
+				6F425305206E24E100FC6D25 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,21 +565,21 @@
 			files = (
 				6F098840206C151B00E6146C /* Error.m in Sources */,
 				6F098823206BF75700E6146C /* MasterViewModel.m in Sources */,
+				6F425303206E24D700FC6D25 /* AppDelegate.m in Sources */,
 				6F09883D206C142A00E6146C /* Http.m in Sources */,
 				6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */,
 				6F098827206BFCD000E6146C /* EmailValidator.m in Sources */,
 				6F098856206C335600E6146C /* ValidateResponse.m in Sources */,
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,
 				6F09884D206C175E00E6146C /* NSString+hasContent__NT.m in Sources */,
-				6FB4DE89206BCE2300D62416 /* main.m in Sources */,
 				6FF779F6206CE73600C8BB2A /* SuggestionsCell.m in Sources */,
 				6FF779EE206CE3C000C8BB2A /* SuggestionsDataSource.m in Sources */,
 				6F098833206C085100E6146C /* UIColor+EmailVerification.m in Sources */,
-				6FB4DE7B206BCE2300D62416 /* AppDelegate.m in Sources */,
 				6F09884F206C175E00E6146C /* NSString+isMatching__NT.m in Sources */,
 				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
 				6F098853206C29B700E6146C /* SuggestionsController.m in Sources */,
 				6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */,
+				6F425308206E24E900FC6D25 /* main.m in Sources */,
 				6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,20 +617,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6FB4DE7F206BCE2300D62416 /* Main.storyboard */ = {
+		6F42530A206E251700FC6D25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6FB4DE80206BCE2300D62416 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6FB4DE84206BCE2300D62416 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6FB4DE85206BCE2300D62416 /* Base */,
+				6F42530B206E251700FC6D25 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6F42530C206E251700FC6D25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F42530D206E251700FC6D25 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
