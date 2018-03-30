@@ -78,7 +78,13 @@
     
     _isValid = [RACSignal merge:@[self.deliverable, isValidFormat]];
     
-    // Status
+    _status = [self createStatusWithIsEmpty:isEmpty isValidFormat:isValidFormat isDeliverable:self.deliverable];
+    
+    [self ensure];
+    return self;
+}
+
+- (RACSignal *)createStatusWithIsEmpty:(RACSignal *)isEmpty isValidFormat:(RACSignal *)isValidFormat isDeliverable:(RACSignal *)isDeliverable {
     RACSignal *emptyStatus = [[isEmpty filter:^BOOL(NSNumber *value) {
         return value.boolValue;
     }] map:^NSString *(id _) {
@@ -89,16 +95,13 @@
         return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
     }];
     
-    RACSignal *deliverableStatus = [[self.deliverable filter:^BOOL(id value) {
+    RACSignal *deliverableStatus = [[isDeliverable filter:^BOOL(id value) {
         return value != nil;
     }] map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Looks great!", @"") : NSLocalizedString(@"Undeliverable", @"");
     }];
     
-    _status = [RACSignal merge:@[deliverableStatus, emptyStatus, formatStatus]];
-    
-    [self ensure];
-    return self;
+    return [RACSignal merge:@[deliverableStatus, emptyStatus, formatStatus]];
 }
 
 @end
