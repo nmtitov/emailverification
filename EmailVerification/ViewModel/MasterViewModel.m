@@ -84,14 +84,17 @@
     }] map:^NSString *(id _) {
         return NSLocalizedString(@"Email is empty", @"");
     }];
+    
     RACSignal *formatStatus = [isValidFormat map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Email format is correct", @"") : NSLocalizedString(@"Email format is invalid", @"");
     }];
+    
     RACSignal *deliverableStatus = [[self.deliverable filter:^BOOL(id value) {
         return value != nil;
     }] map:^NSString *(NSNumber *value) {
         return value.boolValue ? NSLocalizedString(@"Looks great!", @"") : NSLocalizedString(@"Undeliverable", @"");
     }];
+    
     _status = [RACSignal merge:@[deliverableStatus, emptyStatus, formatStatus]];
     
     [self ensure];
