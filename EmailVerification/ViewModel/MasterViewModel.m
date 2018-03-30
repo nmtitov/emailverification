@@ -71,7 +71,7 @@
         return [[self.http verifyEmail:value] tryMap:^id(id value, NSError **errorPtr) {
             return [[ValidateResponse alloc] initWithAttributes:value];
         }];
-    }] switchToLatest] map:^id _Nullable(ValidateResponse *value) {
+    }] switchToLatest] map:^id(ValidateResponse *value) {
         return @([value.result isEqualToString:@"deliverable"]);
     }] catchTo:[RACSignal empty]];
 }
