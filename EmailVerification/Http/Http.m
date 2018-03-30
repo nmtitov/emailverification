@@ -31,7 +31,7 @@
         return nil;
     }
 
-    _kickboxApiKey = [self loadApiKey];
+    _kickboxApiKey = [self readApiKey];
     _manager = [self createManager];
     [[AFNetworkActivityLogger sharedLogger] startLogging];
 
@@ -39,7 +39,9 @@
     return self;
 }
 
-- (NSString *)loadApiKey {
+#pragma mark - Helper
+
+- (NSString *)readApiKey {
     NSURL *url = [NSBundle.mainBundle URLForResource:@"kickbox" withExtension:@"txt"];
     if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
         @throw [Error projectConfigurationError];
@@ -56,6 +58,8 @@
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     return manager;
 }
+
+#pragma mark - Requests
 
 - (RACSignal *)verifyEmail:(NSString *)email {
     NSParameterAssert(email);
