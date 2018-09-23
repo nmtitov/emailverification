@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5085790A0A94877901E65A80 /* libPods-EmailVerificationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1660A7F3837F388427433317 /* libPods-EmailVerificationTests.a */; };
+		5BEB08BF3673BD4289B75082 /* libPods-EmailVerificationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A30D510FAA30155B6476C92 /* libPods-EmailVerificationTests.a */; };
 		6F098823206BF75700E6146C /* MasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098822206BF75700E6146C /* MasterViewModel.m */; };
 		6F098827206BFCD000E6146C /* EmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098826206BFCD000E6146C /* EmailValidator.m */; };
 		6F098829206C000900E6146C /* EmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F098828206C000900E6146C /* EmailValidatorTests.m */; };
@@ -25,7 +25,6 @@
 		6F425303206E24D700FC6D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F425302206E24D700FC6D25 /* AppDelegate.m */; };
 		6F425305206E24E100FC6D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F425304206E24E100FC6D25 /* Assets.xcassets */; };
 		6F425308206E24E900FC6D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F425306206E24E900FC6D25 /* main.m */; };
-		6F425309206E24E900FC6D25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F425307206E24E900FC6D25 /* Info.plist */; };
 		6F42530E206E251700FC6D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530A206E251700FC6D25 /* LaunchScreen.storyboard */; };
 		6F42530F206E251700FC6D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530C206E251700FC6D25 /* Main.storyboard */; };
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
@@ -35,8 +34,8 @@
 		6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */; };
 		6FF779F3206CE50800C8BB2A /* free.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF779F2206CE50800C8BB2A /* free.txt */; };
 		6FF779F6206CE73600C8BB2A /* SuggestionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */; };
-		88118B31B065F5A539714D9A /* libPods-EmailVerificationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */; };
-		BC4907A89F2123AAFB630BE4 /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */; };
+		FE6798F6C41EDBDA500D2E8A /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9481CB549513CD71D63E01DA /* libPods-EmailVerification.a */; };
+		FEA49B95193CACF26622635C /* libPods-EmailVerificationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 501057A3291AA0114FC50A5D /* libPods-EmailVerificationUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05A997F8813F976238B18215 /* Pods-EmailVerificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1660A7F3837F388427433317 /* libPods-EmailVerificationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.debug.xcconfig"; sourceTree = "<group>"; };
+		0AB6E85E18FA72758F927E9E /* Pods-EmailVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BC376353003CB842C2A114D /* Pods-EmailVerificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A30D510FAA30155B6476C92 /* libPods-EmailVerificationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		501057A3291AA0114FC50A5D /* libPods-EmailVerificationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsSelectionDelegate.h; sourceTree = "<group>"; };
 		6F098820206BF57300E6146C /* Ensurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ensurable.h; sourceTree = "<group>"; };
 		6F098821206BF75700E6146C /* MasterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewModel.h; sourceTree = "<group>"; };
@@ -114,10 +112,11 @@
 		6FF779F2206CE50800C8BB2A /* free.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = free.txt; sourceTree = "<group>"; };
 		6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsCell.h; sourceTree = "<group>"; };
 		6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsCell.m; sourceTree = "<group>"; };
-		72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.release.xcconfig"; sourceTree = "<group>"; };
-		D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E38D8540BA5DD9556AB0FAD7 /* Pods-EmailVerificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.release.xcconfig"; sourceTree = "<group>"; };
+		9481CB549513CD71D63E01DA /* libPods-EmailVerification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C4BE47DC2EA3816121877E /* Pods-EmailVerificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7111F1BE975AAE84DBFC849 /* Pods-EmailVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.debug.xcconfig"; sourceTree = "<group>"; };
+		C7E6B8FF411B583CCE765726 /* Pods-EmailVerificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationTests/Pods-EmailVerificationTests.release.xcconfig"; sourceTree = "<group>"; };
+		F6FB66C94DD37E38ED3BC83A /* Pods-EmailVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerification/Pods-EmailVerification.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC4907A89F2123AAFB630BE4 /* libPods-EmailVerification.a in Frameworks */,
+				FE6798F6C41EDBDA500D2E8A /* libPods-EmailVerification.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5085790A0A94877901E65A80 /* libPods-EmailVerificationTests.a in Frameworks */,
+				5BEB08BF3673BD4289B75082 /* libPods-EmailVerificationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,32 +140,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88118B31B065F5A539714D9A /* libPods-EmailVerificationUITests.a in Frameworks */,
+				FEA49B95193CACF26622635C /* libPods-EmailVerificationUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B4522268DD259117C21E3BB /* Pods */ = {
+		5A6C581605C38CD449C408EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */,
-				72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */,
-				498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */,
-				E38D8540BA5DD9556AB0FAD7 /* Pods-EmailVerificationTests.release.xcconfig */,
-				05A997F8813F976238B18215 /* Pods-EmailVerificationUITests.debug.xcconfig */,
-				D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4D91DADC454D20AB0393FDD9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D54DBC3373F539D8F533DE56 /* libPods-EmailVerification.a */,
-				1660A7F3837F388427433317 /* libPods-EmailVerificationTests.a */,
-				45356D1D12C0E4216BF9743D /* libPods-EmailVerificationUITests.a */,
+				9481CB549513CD71D63E01DA /* libPods-EmailVerification.a */,
+				2A30D510FAA30155B6476C92 /* libPods-EmailVerificationTests.a */,
+				501057A3291AA0114FC50A5D /* libPods-EmailVerificationUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,8 +250,8 @@
 				6FB4DE91206BCE2300D62416 /* EmailVerificationTests */,
 				6FB4DE9C206BCE2300D62416 /* EmailVerificationUITests */,
 				6FB4DE77206BCE2200D62416 /* Products */,
-				2B4522268DD259117C21E3BB /* Pods */,
-				4D91DADC454D20AB0393FDD9 /* Frameworks */,
+				D8D9A92056E58B2BCE9B0C80 /* Pods */,
+				5A6C581605C38CD449C408EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -367,6 +353,19 @@
 			path = EmailVerification/View;
 			sourceTree = SOURCE_ROOT;
 		};
+		D8D9A92056E58B2BCE9B0C80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7111F1BE975AAE84DBFC849 /* Pods-EmailVerification.debug.xcconfig */,
+				F6FB66C94DD37E38ED3BC83A /* Pods-EmailVerification.release.xcconfig */,
+				0AB6E85E18FA72758F927E9E /* Pods-EmailVerificationTests.debug.xcconfig */,
+				C7E6B8FF411B583CCE765726 /* Pods-EmailVerificationTests.release.xcconfig */,
+				0BC376353003CB842C2A114D /* Pods-EmailVerificationUITests.debug.xcconfig */,
+				95C4BE47DC2EA3816121877E /* Pods-EmailVerificationUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,7 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FB4DEA2206BCE2300D62416 /* Build configuration list for PBXNativeTarget "EmailVerification" */;
 			buildPhases = (
-				875437E50150DAEB45CA1A88 /* [CP] Check Pods Manifest.lock */,
+				0133F52BAD157D738D2514A0 /* [CP] Check Pods Manifest.lock */,
 				6FB4DE72206BCE2200D62416 /* Sources */,
 				6FB4DE73206BCE2200D62416 /* Frameworks */,
 				6FB4DE74206BCE2200D62416 /* Resources */,
@@ -392,7 +391,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FB4DEA5206BCE2300D62416 /* Build configuration list for PBXNativeTarget "EmailVerificationTests" */;
 			buildPhases = (
-				98C86C542E228F0917FCA23B /* [CP] Check Pods Manifest.lock */,
+				9FB31DC44F318924F63E82EA /* [CP] Check Pods Manifest.lock */,
 				6FB4DE8A206BCE2300D62416 /* Sources */,
 				6FB4DE8B206BCE2300D62416 /* Frameworks */,
 				6FB4DE8C206BCE2300D62416 /* Resources */,
@@ -411,7 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FB4DEA8206BCE2300D62416 /* Build configuration list for PBXNativeTarget "EmailVerificationUITests" */;
 			buildPhases = (
-				17957691755EA8BFADA9D1B5 /* [CP] Check Pods Manifest.lock */,
+				244CB41EC1A0BB3E01E967FD /* [CP] Check Pods Manifest.lock */,
 				6FB4DE95206BCE2300D62416 /* Sources */,
 				6FB4DE96206BCE2300D62416 /* Frameworks */,
 				6FB4DE97206BCE2300D62416 /* Resources */,
@@ -477,7 +476,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F098839206C0E0700E6146C /* kickbox.txt in Resources */,
-				6F425309206E24E900FC6D25 /* Info.plist in Resources */,
 				6FF779F3206CE50800C8BB2A /* free.txt in Resources */,
 				6F42530F206E251700FC6D25 /* Main.storyboard in Resources */,
 				6F42530E206E251700FC6D25 /* LaunchScreen.storyboard in Resources */,
@@ -502,25 +500,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17957691755EA8BFADA9D1B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EmailVerificationUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		875437E50150DAEB45CA1A88 /* [CP] Check Pods Manifest.lock */ = {
+		0133F52BAD157D738D2514A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -538,7 +518,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98C86C542E228F0917FCA23B /* [CP] Check Pods Manifest.lock */ = {
+		244CB41EC1A0BB3E01E967FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmailVerificationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB31DC44F318924F63E82EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -742,7 +740,7 @@
 		};
 		6FB4DEA3206BCE2300D62416 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 608052D59741F9A457FB01FC /* Pods-EmailVerification.debug.xcconfig */;
+			baseConfigurationReference = B7111F1BE975AAE84DBFC849 /* Pods-EmailVerification.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -759,7 +757,7 @@
 		};
 		6FB4DEA4206BCE2300D62416 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72ECEE984E7DEFBE6577D426 /* Pods-EmailVerification.release.xcconfig */;
+			baseConfigurationReference = F6FB66C94DD37E38ED3BC83A /* Pods-EmailVerification.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -776,7 +774,7 @@
 		};
 		6FB4DEA6206BCE2300D62416 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498F88911948A85D9A9AE5A1 /* Pods-EmailVerificationTests.debug.xcconfig */;
+			baseConfigurationReference = 0AB6E85E18FA72758F927E9E /* Pods-EmailVerificationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -792,7 +790,7 @@
 		};
 		6FB4DEA7206BCE2300D62416 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E38D8540BA5DD9556AB0FAD7 /* Pods-EmailVerificationTests.release.xcconfig */;
+			baseConfigurationReference = C7E6B8FF411B583CCE765726 /* Pods-EmailVerificationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -808,7 +806,7 @@
 		};
 		6FB4DEA9206BCE2300D62416 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05A997F8813F976238B18215 /* Pods-EmailVerificationUITests.debug.xcconfig */;
+			baseConfigurationReference = 0BC376353003CB842C2A114D /* Pods-EmailVerificationUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5HDTU7792;
@@ -823,7 +821,7 @@
 		};
 		6FB4DEAA206BCE2300D62416 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D05D6948C5ACA823CBDB1CF4 /* Pods-EmailVerificationUITests.release.xcconfig */;
+			baseConfigurationReference = 95C4BE47DC2EA3816121877E /* Pods-EmailVerificationUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5HDTU7792;
