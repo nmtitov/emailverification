@@ -30,5 +30,5 @@
 
 © 2018 Nikita Titov
 
-http://titov.link
+https://titov.app
 
