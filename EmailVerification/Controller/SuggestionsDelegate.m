@@ -11,14 +11,11 @@
 
 @implementation SuggestionsDelegate
 
-- (void)ensure {
-    NSCParameterAssert(self.dataSource);
-}
-
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate didSelectSuggestion:[self.dataSource itemAt:indexPath.row]];
+    SuggestionsDataSource *dataSource = (SuggestionsDataSource *)tableView.dataSource;
+    [self.delegate didSelectSuggestion:[dataSource itemAt:indexPath.row]];
 }
 
 @end

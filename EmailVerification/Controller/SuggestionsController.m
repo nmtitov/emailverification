@@ -18,12 +18,10 @@
     NSParameterAssert(self.tableView.delegate);
     // Child
     [self.dataSourceObject ensure];
-    [self.delegateObject ensure];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.delegateObject setDataSource:self.dataSourceObject];
     [self ensure];
 }
 
