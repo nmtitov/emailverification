@@ -1,4 +1,3 @@
-
 //
 //  SuggestionsDataSource.m
 //  EmailVerification
@@ -13,6 +12,39 @@
 #import "NSString+isEmpty__NT.h"
 #import "NSString+isMatching__NT.h"
 #import "SuggestionsCell.h"
+
+@interface DomainHelper : NSObject
+
++ (NSArray *)domains;
++ (NSArray *)top;
+
+@end
+
+@implementation DomainHelper
+
++ (NSArray *)domains {
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
+    if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
+        @throw [Error projectConfigurationError];
+    }
+    NSError *error;
+    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
+    if (!string) {
+        @throw [Error projectConfigurationError];
+    }
+    return [string componentsSeparatedByString:@"\n"];
+}
+
++ (NSArray *)top {
+    return @[
+        @"gmail.com",
+        @"yahoo.com",
+        @"yandex.ru",
+        @"mail.ru"
+    ];
+}
+
+@end
 
 @interface SuggestionsDataSource ()
 
@@ -38,28 +70,10 @@
     }
     
     _suggested = [[NSMutableArray alloc] init];
-    _all = [self loadDomains];
-    _top = @[
-        @"gmail.com",
-        @"yahoo.com",
-        @"yandex.ru",
-        @"mail.ru"
-    ];
+    _all = [DomainHelper domains];
+    _top = [DomainHelper top];
     
     return self;
-}
-
-- (NSArray *)loadDomains {
-    NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
-    if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
-        @throw [Error projectConfigurationError];
-    }
-    NSError *error;
-    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
-    if (!string) {
-        @throw [Error projectConfigurationError];
-    }
-    return [string componentsSeparatedByString:@"\n"];
 }
 
 - (void)fetchSuggestionsForInput:(NSString *)input {
