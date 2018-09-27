@@ -13,14 +13,14 @@
 #import "NSString+isMatching__NT.h"
 #import "SuggestionsCell.h"
 
-@interface DomainHelper : NSObject
+@interface SuggestionsHelper : NSObject
 
 + (NSArray *)domains;
 + (NSArray *)top;
 
 @end
 
-@implementation DomainHelper
+@implementation SuggestionsHelper
 
 + (NSArray *)domains {
     NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
@@ -70,8 +70,8 @@
     }
     
     _suggested = [[NSMutableArray alloc] init];
-    _all = [DomainHelper domains];
-    _top = [DomainHelper top];
+    _all = [SuggestionsHelper domains];
+    _top = [SuggestionsHelper top];
     
     return self;
 }
