@@ -7,44 +7,10 @@
 //
 
 #import "SuggestionsDataSource.h"
-#import "Error.h"
-#import "NSString+TrimmedString__NT.h"
 #import "NSString+isEmpty__NT.h"
 #import "NSString+isMatching__NT.h"
 #import "SuggestionsCell.h"
-
-@interface SuggestionsHelper : NSObject
-
-+ (NSArray *)domains;
-+ (NSArray *)top;
-
-@end
-
-@implementation SuggestionsHelper
-
-+ (NSArray *)domains {
-    NSURL *url = [NSBundle.mainBundle URLForResource:@"free" withExtension:@"txt"];
-    if (![NSFileManager.defaultManager fileExistsAtPath:url.path]) {
-        @throw [Error projectConfigurationError];
-    }
-    NSError *error;
-    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error].trimmedString__NT;
-    if (!string) {
-        @throw [Error projectConfigurationError];
-    }
-    return [string componentsSeparatedByString:@"\n"];
-}
-
-+ (NSArray *)top {
-    return @[
-        @"gmail.com",
-        @"yahoo.com",
-        @"yandex.ru",
-        @"mail.ru"
-    ];
-}
-
-@end
+#import "SuggestionsHelper.h"
 
 @interface SuggestionsDataSource ()
 

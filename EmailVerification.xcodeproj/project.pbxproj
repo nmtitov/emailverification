@@ -27,6 +27,7 @@
 		6F425308206E24E900FC6D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F425306206E24E900FC6D25 /* main.m */; };
 		6F42530E206E251700FC6D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530A206E251700FC6D25 /* LaunchScreen.storyboard */; };
 		6F42530F206E251700FC6D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F42530C206E251700FC6D25 /* Main.storyboard */; };
+		6F5F3EB5215CE434000C4E90 /* SuggestionsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F3EB4215CE434000C4E90 /* SuggestionsHelper.m */; };
 		6FB4DE93206BCE2300D62416 /* EmailVerificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */; };
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
 		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
@@ -94,6 +95,8 @@
 		6F425307206E24E900FC6D25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EmailVerification/Info.plist; sourceTree = "<group>"; };
 		6F42530B206E251700FC6D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EmailVerification/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F42530D206E251700FC6D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EmailVerification/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F5F3EB3215CE434000C4E90 /* SuggestionsHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsHelper.h; sourceTree = "<group>"; };
+		6F5F3EB4215CE434000C4E90 /* SuggestionsHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsHelper.m; sourceTree = "<group>"; };
 		6FB4DE76206BCE2200D62416 /* EmailVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE8E206BCE2300D62416 /* EmailVerificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailVerificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4DE92206BCE2300D62416 /* EmailVerificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailVerificationTests.m; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */,
 				6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */,
 				6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */,
+				6F5F3EB3215CE434000C4E90 /* SuggestionsHelper.h */,
+				6F5F3EB4215CE434000C4E90 /* SuggestionsHelper.m */,
 			);
 			name = Controller;
 			path = EmailVerification/Controller;
@@ -569,6 +574,7 @@
 				6F09882C206C061C00E6146C /* NSObject+NTStringIdentifier.m in Sources */,
 				6F098853206C29B700E6146C /* SuggestionsController.m in Sources */,
 				6F09884E206C175E00E6146C /* NSString+isEmpty__NT.m in Sources */,
+				6F5F3EB5215CE434000C4E90 /* SuggestionsHelper.m in Sources */,
 				6F425308206E24E900FC6D25 /* main.m in Sources */,
 				6F098850206C175E00E6146C /* NSString+TrimmedString__NT.m in Sources */,
 			);
