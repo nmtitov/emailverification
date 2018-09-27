@@ -7,7 +7,6 @@
 //
 
 #import "SuggestionsDelegate.h"
-#import "MasterController.h"
 #import "SuggestionsDataSource.h"
 
 @implementation SuggestionsDelegate

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Ensurable.h"
 #import "MasterViewModel.h"
-#import "Http.h"
 #import "NSObject+NTStringIdentifier.h"
 #import "SuggestionsSelectionDelegate.h"
 

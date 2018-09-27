@@ -10,7 +10,7 @@
 #import "Ensurable.h"
 #import "SuggestionsSelectionDelegate.h"
 
-@class MasterController, SuggestionsDataSource;
+@class SuggestionsDataSource;
 @interface SuggestionsDelegate : NSObject <UITableViewDelegate, Ensurable>
 
 @property(weak, nonatomic) SuggestionsDataSource *dataSource;
