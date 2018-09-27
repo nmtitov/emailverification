@@ -28,7 +28,6 @@
     NSParameterAssert(self.inputTextField);
     NSParameterAssert(self.statusLabel);
     NSParameterAssert(self.tableController);
-    
     NSParameterAssert(self.viewModel);
 }
 
