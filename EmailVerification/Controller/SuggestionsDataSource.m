@@ -107,10 +107,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return [self numberOfItems] == 0 ? nil : NSLocalizedString(@"Suggestions", @"");
-    }
-    return nil;
+    return [self numberOfItems] == 0 ? nil : NSLocalizedString(@"Suggestions", @"");
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
