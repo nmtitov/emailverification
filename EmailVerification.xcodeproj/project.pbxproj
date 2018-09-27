@@ -31,7 +31,6 @@
 		6FB4DE9E206BCE2300D62416 /* EmailVerificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DE9D206BCE2300D62416 /* EmailVerificationUITests.m */; };
 		6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4DEB2206BD17A00D62416 /* MasterController.m */; };
 		6FF779EE206CE3C000C8BB2A /* SuggestionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */; };
-		6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */; };
 		6FF779F3206CE50800C8BB2A /* free.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF779F2206CE50800C8BB2A /* free.txt */; };
 		6FF779F6206CE73600C8BB2A /* SuggestionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */; };
 		FE6798F6C41EDBDA500D2E8A /* libPods-EmailVerification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9481CB549513CD71D63E01DA /* libPods-EmailVerification.a */; };
@@ -60,7 +59,6 @@
 		0BC376353003CB842C2A114D /* Pods-EmailVerificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailVerificationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailVerificationUITests/Pods-EmailVerificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A30D510FAA30155B6476C92 /* libPods-EmailVerificationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		501057A3291AA0114FC50A5D /* libPods-EmailVerificationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailVerificationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsSelectionDelegate.h; sourceTree = "<group>"; };
 		6F098820206BF57300E6146C /* Ensurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ensurable.h; sourceTree = "<group>"; };
 		6F098821206BF75700E6146C /* MasterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewModel.h; sourceTree = "<group>"; };
 		6F098822206BF75700E6146C /* MasterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewModel.m; sourceTree = "<group>"; };
@@ -107,8 +105,6 @@
 		6FB4DEB3206BD17A00D62416 /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
 		6FF779EC206CE3C000C8BB2A /* SuggestionsDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsDataSource.h; sourceTree = "<group>"; };
 		6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDataSource.m; sourceTree = "<group>"; };
-		6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsDelegate.h; sourceTree = "<group>"; };
-		6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsDelegate.m; sourceTree = "<group>"; };
 		6FF779F2206CE50800C8BB2A /* free.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = free.txt; sourceTree = "<group>"; };
 		6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsCell.h; sourceTree = "<group>"; };
 		6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsCell.m; sourceTree = "<group>"; };
@@ -315,9 +311,6 @@
 				6F098852206C29B700E6146C /* SuggestionsController.m */,
 				6FF779EC206CE3C000C8BB2A /* SuggestionsDataSource.h */,
 				6FF779ED206CE3C000C8BB2A /* SuggestionsDataSource.m */,
-				6F068778206CF36600270570 /* SuggestionsSelectionDelegate.h */,
-				6FF779EF206CE3C700C8BB2A /* SuggestionsDelegate.h */,
-				6FF779F0206CE3C700C8BB2A /* SuggestionsDelegate.m */,
 				6FF779F4206CE73600C8BB2A /* SuggestionsCell.h */,
 				6FF779F5206CE73600C8BB2A /* SuggestionsCell.m */,
 			);
@@ -565,7 +558,6 @@
 				6F098823206BF75700E6146C /* MasterViewModel.m in Sources */,
 				6F425303206E24D700FC6D25 /* AppDelegate.m in Sources */,
 				6F09883D206C142A00E6146C /* Http.m in Sources */,
-				6FF779F1206CE3C700C8BB2A /* SuggestionsDelegate.m in Sources */,
 				6F098827206BFCD000E6146C /* EmailValidator.m in Sources */,
 				6F098856206C335600E6146C /* ValidateResponse.m in Sources */,
 				6FB4DEB4206BD17A00D62416 /* MasterController.m in Sources */,

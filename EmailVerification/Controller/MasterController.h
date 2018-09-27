@@ -10,9 +10,8 @@
 #import "Ensurable.h"
 #import "MasterViewModel.h"
 #import "NSObject+NTStringIdentifier.h"
-#import "SuggestionsSelectionDelegate.h"
 
-@interface MasterController : UIViewController <Ensurable, NTStringIdentifier, SuggestionsSelectionDelegate>
+@interface MasterController : UIViewController <Ensurable, NTStringIdentifier>
 
 @property (strong, nonatomic) MasterViewModel *viewModel;
 

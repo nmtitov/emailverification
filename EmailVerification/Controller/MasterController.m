@@ -8,13 +8,14 @@
 
 #import "MasterController.h"
 #import "SuggestionsController.h"
+#import "SuggestionsDataSource.h"
 #import "Ensurable.h"
 #import "NSString+TrimmedString__NT.h"
 #import "UIColor+EmailVerification.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <ReactiveObjC/RACEXTScope.h>
 
-@interface MasterController ()
+@interface MasterController ()<UITableViewDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *inputTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *statusLabel;
@@ -33,7 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableController.delegateObject.delegate = self;
+    self.tableController.tableView.delegate = self;
     [self ensure];
     [self bind];
 }
@@ -59,9 +60,11 @@
     }];
 }
 
-#pragma mark - SuggestionsSelectionDelegate
+#pragma mark - UITableViewDelegate
 
-- (void)didSelectSuggestion:(NSString *)suggestion {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SuggestionsDataSource *dataSource = (SuggestionsDataSource *)tableView.dataSource;
+    NSString *suggestion = [dataSource itemAt:indexPath.row];
     NSString *current = self.inputTextField.text.trimmedString__NT;
     NSRange range = [current rangeOfString:@"@"];
     if (range.location != NSNotFound) {

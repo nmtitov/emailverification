@@ -10,12 +10,10 @@
 #import "Ensurable.h"
 #import "NSObject+NTStringIdentifier.h"
 #import "SuggestionsDataSource.h"
-#import "SuggestionsDelegate.h"
 
 @interface SuggestionsController : UITableViewController <Ensurable, NTStringIdentifier>
 
 @property (strong, nonatomic) IBOutlet SuggestionsDataSource *dataSourceObject;
-@property (strong, nonatomic) IBOutlet SuggestionsDelegate *delegateObject;
 
 - (void)showSuggestionsForInput:(NSString *)input;
 
