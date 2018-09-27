@@ -28,7 +28,7 @@
 }
 
 - (void)showSuggestionsForInput:(NSString *)input {
-    [self.dataSourceObject fetchSuggestionsForInput:input];
+    [self.dataSourceObject loadSuggestionsForInput:input];
     [self.tableView reloadData];
 }
 

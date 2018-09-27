@@ -11,7 +11,7 @@
 
 @interface SuggestionsDataSource : NSObject <UITableViewDataSource, Ensurable>
 
-- (void)fetchSuggestionsForInput:(NSString *)input;
+- (void)loadSuggestionsForInput:(NSString *)input;
 - (NSString *)itemAt:(NSInteger)index;
 
 @end

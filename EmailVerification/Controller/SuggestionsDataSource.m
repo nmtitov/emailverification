@@ -76,7 +76,7 @@
     return self;
 }
 
-- (void)fetchSuggestionsForInput:(NSString *)input {
+- (void)loadSuggestionsForInput:(NSString *)input {
     [self.suggested removeAllObjects];
     
     NSRange range = [input rangeOfString:@"@"];
