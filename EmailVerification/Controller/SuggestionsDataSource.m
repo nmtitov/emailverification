@@ -80,15 +80,16 @@
     [self.suggested removeAllObjects];
     
     NSRange range = [input rangeOfString:@"@"];
-    if (range.location != NSNotFound) {
-        NSString *substring = [input substringFromIndex:range.location + 1];
-        if (substring.isEmpty__NT) {
-            [self.suggested addObjectsFromArray:self.top];
-        } else {
-            for (NSString *domain in self.all) {
-                if ([domain hasPrefix:substring] && ![domain isEqualToString:substring]) {
-                    [self.suggested addObject:domain];
-                }
+    if (range.location == NSNotFound) {
+        return;
+    }
+    NSString *substring = [input substringFromIndex:range.location + 1];
+    if (substring.isEmpty__NT) {
+        [self.suggested addObjectsFromArray:self.top];
+    } else {
+        for (NSString *domain in self.all) {
+            if ([domain hasPrefix:substring] && ![domain isEqualToString:substring]) {
+                [self.suggested addObject:domain];
             }
         }
     }
