@@ -7,7 +7,7 @@
 //
 
 #import "SuggestionsDataSource.h"
-#import "NSString+isEmpty__NT.h"
+#import "NSString+hasContent__NT.h"
 #import "NSString+isMatching__NT.h"
 #import "SuggestionsCell.h"
 #import "SuggestionsHelper.h"
@@ -50,14 +50,14 @@
         return;
     }
     NSString *substring = [input substringFromIndex:range.location + 1];
-    if (substring.isEmpty__NT) {
-        [self.suggested addObjectsFromArray:self.top];
-    } else {
+    if (substring.hasContent__NT) {
         for (NSString *domain in self.all) {
             if ([domain hasPrefix:substring] && ![domain isEqualToString:substring]) {
                 [self.suggested addObject:domain];
             }
         }
+    } else {
+        [self.suggested addObjectsFromArray:self.top];
     }
 }
 
