@@ -28,7 +28,7 @@
 14. Refactored code, deleted repeated lines, simplified methods.
 15. Set deployment target to 9.3.
 
-© 2018 Nikita Titov
+© 2019 Nikita Titov
 
-https://titov.app
+https://titov.dev
 
